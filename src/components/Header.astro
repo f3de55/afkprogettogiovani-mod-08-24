@@ -1,0 +1,97 @@
+<header>
+    <a href="/" class="logo"></a>
+
+    <!-- Nav toggle -->
+    <input type="checkbox" class="nav-toggle" id="nav-toggle" />
+    <label for="nav-toggle" class="hamburger-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/chi-siamo">Chi siamo</a></li>
+            <li><a href="/eventi">Eventi</a></li>
+            <li><a href="/sostenitori">Sostenitori</a></li>
+            <li><a href="/dicono-di-noi">Dicono di noi</a></li>
+            <li><a href="/contatti">Contatti</a></li>
+        </ul>
+    </nav>
+</header>
+
+<style>
+    header {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        width: calc(100% - 2.75rem * 2);
+        height: 3.38rem;
+        top: 0;
+        left: 0;
+        padding: 1.38rem 2.75rem;
+        background: #F9F6F8;
+    }
+    .logo {
+        width: 5.88rem;
+        height: 3.38rem;
+        border-radius: 0.69rem;
+        background: #D9D9D9;
+    }
+    
+    /* Nav toggle */
+    .nav-toggle {
+        display: none;
+    }
+    .hamburger-icon {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        margin-left: auto;
+    }
+    .hamburger-icon span {
+        width: 1rem;
+        height: 0.125rem;
+        border-radius: 1rem;
+        background: black;
+        transition: transform 300ms, opacity 300ms;
+    }
+
+    /* On nav toggle pressed */
+    .nav-toggle:checked ~ .hamburger-icon span:nth-child(1) {
+        transform: rotate(45deg) translateY(0.53rem);
+    }
+    .nav-toggle:checked ~ .hamburger-icon span:nth-child(2) {
+        opacity: 0;
+    }
+    .nav-toggle:checked ~ .hamburger-icon span:nth-child(3) {
+        transform: rotate(-45deg) translateY(-0.53rem);
+    }
+    .nav-toggle:checked ~ nav {
+        display: block;
+    }
+
+    /* Nav links */
+    nav {
+        display: none;
+        position: fixed;
+        width: 100%;
+        top: 6.14rem;
+        left: 0;
+        background: #FEE1F7;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1.38rem;
+        margin: 0;
+        padding: 1.38rem 2.75rem;
+        list-style: none;
+    }
+    ul li a {
+        color: black;
+        font-weight: 700;
+        text-decoration: none;
+    }
+</style>
