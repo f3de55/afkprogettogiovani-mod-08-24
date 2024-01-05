@@ -1,18 +1,45 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
 import Link from '../components/Link.astro';
 import Hero from '../components/Hero.astro';
+
+import { Image } from 'astro:assets';
+import chisiamoImage from '../assets/chi-siamo.jpg';
 ---
 
 <Layout title="AFK Progetto Giovani">
     <main>
         <Hero />
+        <section>
+            <h2>CHI SIAMO?</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Vestibulum tempor scelerisque eros eu semper.</p>
+            <Image src={chisiamoImage} alt="Una foto di noi" />
+        </section>
     </main>
 </Layout>
 
 <style>
     main {
         margin-top: 6.14rem;
+    }
+    section {
+        padding: 2.75rem;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 0.69rem;
+    }
+
+    h2 {
+        margin: 0;
+        text-align: center;
+        color: #6E185B;
+        font-size: 1.375rem;
+        font-weight: 700;
+    }
+    p {
+        font-family: Merriweather;
     }
 </style>
