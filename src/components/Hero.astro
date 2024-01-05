@@ -1,0 +1,41 @@
+---
+import Link from '../components/Link.astro';
+---
+
+<div class="hero">
+    <video autoplay muted loop>
+        <source src="/hero-video.mp4" />
+    </video>
+    <div class="hero-text">
+        <h1>AFK PROGETTO GIOVANI</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <Link url="/chi-siamo">Scopri chi siamo <i class="fa-solid fa-chevron-right"></i></Link>
+    </div>
+</div>
+
+<style>
+    .hero {
+        position: relative;
+    }
+    .hero video {
+        width: 100%;
+        height: 31.75rem;
+        object-fit: cover;
+    }
+    .hero-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        white-space: nowrap;
+        color: #FCFBFC;
+    }
+    .hero-text h1 {
+        font-size: 1.5rem;
+    }
+    .hero-text p {
+        margin-bottom: 2rem;
+        font-family: Merriweather;
+    }
+</style>
