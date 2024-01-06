@@ -25,14 +25,101 @@ import Header from '../components/Header.astro';
 </html>
 <style is:global>
     :root {
+        --header-height: 6.14rem;
 
+        /* Spaces used in margins and paddings */
+        --space-l: 2.75rem;
+        --space-m: 1.375rem;
+        --space-s: 0.6875rem;
+
+        --border-radius: 0.6875rem;
+
+        /* Colors */
+        --placeholder-gray: #D9D9D9;
+
+        --white-1: #FDFCFD;
+        --white-2: #FCFBFC;
+        --white-3: #F9F6F8;
+
+        --black-1: #2F0C28;
+        --black-3: #260A20;
+
+        --pink-1: #FEEBFA;
+        --pink-2: #FEE1F7;
+        --pink-3: #FCC0EF;
+        --pink-4: #F535CB;
+        --pink-5: #DD30B7;
+        --pink-8: #93207A;
+        --pink-9: #6E185B;
     }
+
     html {
-        background: #FEE1F7;
+        background: var(--pink-2);
         font-family: 'Inter Variable';
     }
     body {
         margin: 0;
         padding: 0;
+    }
+    main {
+        margin-top: var(--header-height);
+    }
+    section {
+        padding: var(--space-l);
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: var(--border-radius);
+    }
+
+    /* Typography */
+    h1, h2, h3, h4, h5, p {
+        margin: 0;
+        padding: 0;
+    }
+
+    h1, h2, h3, h4, h5 {
+        font-weight: 700;
+        line-height: 120%;
+    }
+    h1 {
+        color: var(--white-3);
+        font-size: 1.5rem;
+    }
+    h2 {
+        color: var(--pink-9);
+        font-size: 1.375rem;
+    }
+    h3 {
+        color: var(--pink-9);
+        font-size: 1.312rem;
+    }
+    h4 {
+        color: var(--pink-8);
+        font-size: 1.188rem;
+    }
+    h5 {
+        color: var(--pink-9);
+        font-size: 1.125rem;
+    }
+    h6 {
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 140%;
+    }
+
+    p, a {
+        color: black;
+        font-family: Merriweather;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 140%;
+        text-decoration: none;
+    }
+    .bold {
+        font-weight: 700;
+        line-height: 120%;
     }
 </style>

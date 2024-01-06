@@ -11,12 +11,12 @@
 
     <nav>
         <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/chi-siamo">Chi siamo</a></li>
-            <li><a href="/eventi">Eventi</a></li>
-            <li><a href="/sostenitori">Sostenitori</a></li>
-            <li><a href="/dicono-di-noi">Dicono di noi</a></li>
-            <li><a href="/contatti">Contatti</a></li>
+            <li><a class="bold" href="/">Home</a></li>
+            <li><a class="bold" href="/chi-siamo">Chi siamo</a></li>
+            <li><a class="bold" href="/eventi">Eventi</a></li>
+            <li><a class="bold" href="/sostenitori">Sostenitori</a></li>
+            <li><a class="bold" href="/dicono-di-noi">Dicono di noi</a></li>
+            <li><a class="bold" href="/contatti">Contatti</a></li>
         </ul>
     </nav>
 </header>
@@ -26,19 +26,19 @@
         display: flex;
         align-items: center;
         position: fixed;
-        width: calc(100% - 2.75rem * 2);
+        width: calc(100% - var(--space-l) * 2);
         height: 3.38rem;
         top: 0;
         left: 0;
         z-index: 1;
-        padding: 1.38rem 2.75rem;
-        background: #F9F6F8;
+        padding: var(--space-m) var(--space-l);
+        background: var(--white-3);
     }
     .logo {
         width: 5.88rem;
         height: 3.38rem;
-        border-radius: 0.69rem;
-        background: #D9D9D9;
+        border-radius: var(--border-radius);
+        background: var(--placeholder-gray);
     }
     
     /* Nav toggle */
@@ -55,7 +55,7 @@
         width: 1rem;
         height: 0.125rem;
         border-radius: 1rem;
-        background: black;
+        background: #000000;
         transition: transform 300ms, opacity 300ms;
     }
 
@@ -78,22 +78,16 @@
         display: none;
         position: fixed;
         width: 100%;
-        top: 6.14rem;
+        top: var(--header-height);
         left: 0;
-        background: #FEE1F7;
+        background: var(--pink-2);
     }
     ul {
         display: flex;
         flex-direction: column;
-        gap: 1.38rem;
+        gap: var(--space-m);
         margin: 0;
-        padding: 1.38rem 2.75rem;
+        padding: var(--space-m) var(--space-l);
         list-style: none;
-    }
-    ul li a {
-        color: #000000;
-        font-family: Merriweather;
-        font-weight: 700;
-        text-decoration: none;
     }
 </style>

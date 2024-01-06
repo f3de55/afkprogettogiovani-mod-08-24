@@ -1,0 +1,19 @@
+---
+const { url } = Astro.props;
+---
+
+<a class="bold" href={url}>
+    <slot />
+</a>
+
+<style>
+    a {
+        padding: var(--space-s) var(--space-m);
+        border-radius: var(--border-radius);
+        background: var(--pink-4);
+        color: var(--white-3);
+    }
+    a:hover {
+        background: var(--pink-8);
+    }
+</style>
