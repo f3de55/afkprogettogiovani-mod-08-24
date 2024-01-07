@@ -4,14 +4,22 @@ const { title, place, date } = Astro.props;
 import Button from './Button.astro';
 ---
 
-<div class="event-card">
-    <div class="placeholder"></div>
-    <div class="event-text">
-        <h3>{title}</h3>
-        <p class="bold"><i class="fa-solid fa-location-dot"></i>{place}</p>
-        <p class="bold"><i class="fa-solid fa-clock"></i>{date}</p>
-        <Button text="Scopri di più" />
+<div>
+    <div class="event-card">
+        <div class="placeholder"></div>
+        <div class="event-text">
+            <h3>{title}</h3>
+            <p class="bold"><i class="fa-solid fa-location-dot"></i>{place}</p>
+            <p class="bold"><i class="fa-solid fa-clock"></i>{date}</p>
+            <Button text="Scopri di più" />
+        </div>
     </div>
+
+    <!-- Modal -->
+    <dialog id="eventDialog">
+        <button autofocus>Close</button>
+        <p>Test</p>
+    </dialog>
 </div>
 
 <style>
@@ -36,3 +44,7 @@ import Button from './Button.astro';
         height: 9.125rem;
     }
 </style>
+
+<script>
+
+</script>
