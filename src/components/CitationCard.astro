@@ -1,0 +1,50 @@
+---
+const { title, text } = Astro.props;
+---
+
+<div class="citation-card">
+    <div class="citation-heading">
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="18" viewBox="0 0 26 18" fill="none">
+            <g clip-path="url(#clip0_108_130)">
+              <path d="M20.191 6.35451C20.6635 3.76931 21.4464 1.91217 22.0706 0.762429C22.3155 0.313203 21.8171 -0.187657 21.3739 0.0705181C16.1471 3.11183 13.8553 7.54728 13.5708 11.1015C13.3259 14.1686 15.4211 17.3287 18.5993 17.9036C21.7775 18.4784 24.8211 16.3734 25.3971 13.2013C26.0006 9.87775 23.6519 6.68153 20.191 6.35279V6.35451Z" fill="#FCC0EF"/>
+              <path d="M7.15057 6.35463C7.62307 3.76943 8.40597 1.91229 9.03022 0.762551C9.27509 0.313325 8.77673 -0.187535 8.33354 0.0706401C3.10501 3.11195 0.813214 7.54568 0.528679 11.1016C0.283807 14.1687 2.37901 17.3288 5.55718 17.9037C8.73534 18.4786 11.779 16.3736 12.355 13.2014C12.9585 9.87787 10.6098 6.68166 7.14885 6.35291L7.15057 6.35463Z" fill="#FCC0EF"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_108_130">
+                <rect width="26" height="18" fill="white"/>
+              </clipPath>
+            </defs>
+        </svg>
+        <h3>{title}</h3>
+    </div>
+    <p>{text}</p>
+</div>
+
+<style>
+    .citation-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: var(--space-s);
+        padding: var(--space-s);
+        background: var(--white-3);
+        border-radius: var(--border-radius);
+    }
+    .citation-heading {
+        position: relative;
+        width: 100%;
+    }
+    svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .citation-heading h3 {
+        text-align: center;
+    }
+    /* Kind of a workaround */
+    p {
+        width: 14.06rem;
+    }
+</style>

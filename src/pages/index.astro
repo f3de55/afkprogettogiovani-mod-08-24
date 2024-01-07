@@ -1,6 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
+import ButtonLink from '../components/ButtonLink.astro';
+import EventCard from '../components/EventCard.astro';
+import CitationCard from '../components/CitationCard.astro';
+import ContactInfo from '../components/ContactInfo.astro';
 
 import { Image } from 'astro:assets';
 import chisiamoImage from '../assets/chi-siamo.jpg';
@@ -9,14 +13,42 @@ import chisiamoImage from '../assets/chi-siamo.jpg';
 <Layout title="AFK Progetto Giovani">
     <main>
         <Hero />
-        <section>
+        <section class="section-light">
             <h2>CHI SIAMO?</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Vestibulum tempor scelerisque eros eu semper.</p>
             <Image src={chisiamoImage} alt="Una foto di noi" />
+        </section>
+        <section>
+            <h2>PROSSIMI EVENTI</h2>
+            <EventCard title="Il sentiero d'argento" place="Cornaredo" date="Sabato 8 giu 2024" />
+        </section>
+        <section>
+            <h2>EVENTI PASSATI</h2>
+            <div class="placeholder" id="placeholder1"></div>
+            <ButtonLink url="/afkprogettogiovani/eventi" text="Guarda tutto" />
+        </section>
+        <section class="section-light">
+            <h2>AMICI SOSTENITORI</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Vestibulum tempor scelerisque eros eu semper.</p>
+            <div class="placeholder" id="placeholder2"></div>
+        </section>
+        <section>
+            <h2>DICONO DI NOI</h2>
+            <CitationCard title="Milano Lorenteggio" text="Lorem ipsum dolor sit amet, consectur adipiscing elit..." />
+            <CitationCard title="Fondo DMD" text="Lorem ipsum dolor sit amet, consectur adipiscing elit..." />
+            <ButtonLink url="/afkprogettogiovani/dicono-di-noi" text="Guarda tutti" />
+        </section>
+        <section class="section-light">
+            <ContactInfo />
         </section>
     </main>
 </Layout>
 
 <style>
-
+    #placeholder1 {
+        height: 16.4rem;
+    }
+    #placeholder2 {
+        height: 10.3rem;
+    }
 </style>

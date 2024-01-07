@@ -1,20 +1,22 @@
 ---
-const { url, text } = Astro.props;
+const { text } = Astro.props;
 ---
 
-<a class="bold" href={url}>
+<button class="bold" type="button">
     {text} <i class="fa-solid fa-chevron-right"></i>
-</a>
+</button>
 
 <style>
-    a {
-        align-self: center;
+    button {
+        align-self: flex-start;
         padding: var(--space-s) var(--space-m);
+        border: none;
         border-radius: var(--border-radius);
         background: var(--pink-5);
         color: var(--white-1);
+        cursor: pointer;
     }
-    a:hover {
+    button:hover {
         background: var(--pink-3);
         color: var(--black-1);
     }

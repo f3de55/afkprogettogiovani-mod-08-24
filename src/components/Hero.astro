@@ -9,7 +9,7 @@ import ButtonLink from './ButtonLink.astro';
     <div class="hero-text">
         <h1>AFK PROGETTO GIOVANI</h1>
         <p>Lorem ipsum dolor sit amet.</p>
-        <ButtonLink url="/afkprogettogiovani/chi-siamo">Scopri chi siamo <i class="fa-solid fa-chevron-right"></i></ButtonLink>
+        <ButtonLink url="/afkprogettogiovani/chi-siamo" text="Scopri chi siamo" />
     </div>
 </div>
 
@@ -23,6 +23,10 @@ import ButtonLink from './ButtonLink.astro';
         object-fit: cover;
     }
     .hero-text {
+        display: flex;
+        flex-direction: column;
+
+        gap: var(--space-s);
         position: absolute;
         top: 50%;
         left: 50%;
@@ -30,13 +34,10 @@ import ButtonLink from './ButtonLink.astro';
         text-align: center;
         white-space: nowrap;
     }
-    /* These 2 margins are a workaround, I can't use flex because the button becomes full width, don't know why */
     .hero-text h1 {
-        margin-bottom: var(--space-s);
         color: var(--white-2);
     }
     .hero-text p {
-        margin-bottom: var(--space-m);
         color: var(--white-2);
     }
 </style>
