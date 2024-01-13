@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import PageTitle from '../components/PageTitle.astro';
+import BulletPoint from '../components/BulletPoint.astro';
 
 import { Image } from 'astro:assets';
 ---
@@ -16,9 +17,9 @@ import { Image } from 'astro:assets';
         <section>
             <h2>I NOSTRI OBIETTIVI</h2>
             <div class="icon-list">
-                <p><i class="fa-solid fa-face-laugh-wink"></i>Sostenere le nuove generazioni creando momenti di unione</p>
-                <p><i class="fa-solid fa-masks-theater"></i>Promuovere l'arte e la cultura</p>
-                <p><i class="fa-solid fa-heart"></i>Devolvere il ricavato degli spettacoli in beneficenza</p>
+                <BulletPoint icon="fa-solid fa-face-laugh-wink" content="Sostenere le nuove generazioni creando momenti di unione" />
+                <BulletPoint icon="fa-solid fa-masks-theater" content="Promuovere l'arte e la cultura" />
+                <BulletPoint icon="fa-solid fa-heart" content="Devolvere il ricavato degli spettacoli in beneficenza" />
             </div>
         </section>
         <section class="section-light">

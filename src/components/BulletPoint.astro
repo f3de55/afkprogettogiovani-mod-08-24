@@ -1,0 +1,20 @@
+---
+const {icon, content} = Astro.props;
+---
+
+<div>
+    <i class={icon}></i>
+    <p>{content}</p>
+</div>
+
+<style>
+    div {
+        display: flex;
+        align-items: center;
+        gap: var(--space-s);
+        color: var(--black-1);
+    }
+    i {
+        font-size: 1.5625rem;
+    }
+</style>
