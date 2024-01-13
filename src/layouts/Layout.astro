@@ -1,10 +1,10 @@
 ---
 const { title } = Astro.props;
 
-import '@fontsource-variable/inter';
-import '@fontsource/merriweather';
-import '@fontsource/merriweather/400-italic.css';
-import '@fontsource/merriweather/700.css';
+import '@fontsource/russo-one';
+import '@fontsource/lato/400.css';
+import '@fontsource/lato/700.css';
+import '@fontsource/lato/400-italic.css';
 
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -59,7 +59,7 @@ import Footer from '../components/Footer.astro';
 
     html {
         background: var(--pink-2);
-        font-family: 'Inter Variable';
+        font-family: 'Russo One';
     }
     body {
         margin: 0;
@@ -93,13 +93,13 @@ import Footer from '../components/Footer.astro';
     }
 
     /* Typography */
-    h1, h2, h3, h4, h5, p {
+    h1, h2, h3, h4, h5, h6, p {
         margin: 0;
         padding: 0;
     }
 
-    h1, h2, h3, h4, h5 {
-        font-weight: 700;
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 400;
         line-height: 120%;
     }
     h1 {
@@ -126,13 +126,12 @@ import Footer from '../components/Footer.astro';
     }
     h6 {
         font-size: 1rem;
-        font-weight: 600;
         line-height: 140%;
     }
 
     p, a, button {
         color: black;
-        font-family: Merriweather;
+        font-family: Lato;
         font-size: 1rem;
         font-weight: 400;
         line-height: 140%;

@@ -2,8 +2,6 @@
 import Layout from '../layouts/Layout.astro';
 import PageTitle from '../components/PageTitle.astro';
 import BulletPoint from '../components/BulletPoint.astro';
-
-import { Image } from 'astro:assets';
 ---
 
 <Layout title="Chi siamo - AFK Progetto Giovani">
@@ -16,29 +14,31 @@ import { Image } from 'astro:assets';
         </section>
         <section>
             <h2>I NOSTRI OBIETTIVI</h2>
-            <div class="icon-list">
-                <BulletPoint icon="fa-solid fa-face-laugh-wink" content="Sostenere le nuove generazioni creando momenti di unione" />
-                <BulletPoint icon="fa-solid fa-masks-theater" content="Promuovere l'arte e la cultura" />
-                <BulletPoint icon="fa-solid fa-heart" content="Devolvere il ricavato degli spettacoli in beneficenza" />
-            </div>
+            <BulletPoint icon="fa-solid fa-face-laugh-wink" content="Sostenere le nuove generazioni creando momenti di unione" />
+            <BulletPoint icon="fa-solid fa-masks-theater" content="Promuovere l'arte e la cultura" />
+            <BulletPoint icon="fa-solid fa-heart" content="Devolvere il ricavato degli spettacoli in beneficenza" />
         </section>
         <section class="section-light">
             <h2>I SOCI FONDATORI</h2>
             <div class="placeholder" id="placeholder2"></div>
+        </section>
+        <section class="section-light">
             <h2>TEAM SCRITTURA</h2>
             <div class="placeholder" id="placeholder2"></div>
+        </section>
+        <section class="section-light">
             <h2>TEAM COMUNICAZIONE</h2>
             <div class="placeholder" id="placeholder2"></div>
         </section>
         <section class="section-light">
             <h2>LA NOSTRA STORIA</h2>
-            <h3 class="roadmap-title"><i class="fa-solid fa-calendar"></i>2020</h3>
+            <h3 class="timeline-title"><i class="fa-solid fa-calendar"></i>2020</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Lorem ipsum dolor sit amet, consectetur</p>
-            <h3 class="roadmap-title"><i class="fa-solid fa-calendar"></i>2021</h3>
+            <h3 class="timeline-title"><i class="fa-solid fa-calendar"></i>2021</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Lorem ipsum dolor sit amet, consectetur</p>
-            <h3 class="roadmap-title"><i class="fa-solid fa-calendar"></i>2022</h3>
+            <h3 class="timeline-title"><i class="fa-solid fa-calendar"></i>2022</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Lorem ipsum dolor sit amet, consectetur</p>
-            <h3 class="roadmap-title"><i class="fa-solid fa-calendar"></i>2023</h3>
+            <h3 class="timeline-title"><i class="fa-solid fa-calendar"></i>2023</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Lorem ipsum dolor sit amet, consectetur</p>
             <div class="placeholder" id="placeholder1"></div>
         </section>
@@ -57,35 +57,16 @@ import { Image } from 'astro:assets';
         height: 12rem;
     }
 
-    a {
-        text-align: center;
-        text-decoration: underline;
-    }
-
-    .roadmap-title {
+    .timeline-title {
         display: flex;
-        flex-direction: row;
-        justify-content: center;
         align-self: center;
         gap: var(--space-s);
-        width: max-content;
         padding: 0 var(--space-m);
         background: var(--white-1);
     }
 
-    .icon-list {
-        display: flex;
-        flex-direction: column;
-        gap: var(--space-m);
-    }
-    .icon-list p {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: var(--space-s);
-        color: var(--black-1);
-    }
-    .icon-list i {
-        font-size: 1.5625rem;
+    a {
+        text-align: center;
+        text-decoration: underline;
     }
 </style>
