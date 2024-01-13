@@ -1,0 +1,90 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageTitle from '../components/PageTitle.astro';
+
+import { Image } from 'astro:assets';
+---
+
+<Layout title="Chi siamo - AFK Progetto Giovani">
+    <main>
+        <PageTitle title="CHI SIAMO?" />
+        <section class="section-light">
+            <h2>LONTANO DAGLI SCHERMI FUORI DAGLI SCHEMI</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Vestibulum tempor scelerisque eros eu semper.</p>
+            <div class="placeholder" id="placeholder1"></div>
+        </section>
+        <section>
+            <h2>I NOSTRI OBIETTIVI</h2>
+            <div class="icon-list">
+                <p><i class="fa-solid fa-face-laugh-wink"></i>Sostenere le nuove generazioni creando momenti di unione</p>
+                <p><i class="fa-solid fa-masks-theater"></i>Promuovere l'arte e la cultura</p>
+                <p><i class="fa-solid fa-heart"></i>Devolvere il ricavato degli spettacoli in beneficenza</p>
+            </div>
+        </section>
+        <section class="section-light">
+            <h2>I SOCI FONDATORI</h2>
+            <div class="placeholder" id="placeholder2"></div>
+            <h2>TEAM SCRITTURA</h2>
+            <div class="placeholder" id="placeholder2"></div>
+            <h2>TEAM COMUNICAZIONE</h2>
+            <div class="placeholder" id="placeholder2"></div>
+        </section>
+        <section class="section-light">
+            <h2>LA NOSTRA STORIA</h2>
+            <h3 class="roadmap-title"><i class="fa-solid fa-calendar"></i>2020</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Lorem ipsum dolor sit amet, consectetur</p>
+            <h3 class="roadmap-title"><i class="fa-solid fa-calendar"></i>2021</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Lorem ipsum dolor sit amet, consectetur</p>
+            <h3 class="roadmap-title"><i class="fa-solid fa-calendar"></i>2022</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Lorem ipsum dolor sit amet, consectetur</p>
+            <h3 class="roadmap-title"><i class="fa-solid fa-calendar"></i>2023</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Lorem ipsum dolor sit amet, consectetur</p>
+            <div class="placeholder" id="placeholder1"></div>
+        </section>
+        <section class="section-light">
+            <h2>TRASPARENZA</h2>
+            <a href="#">Statuto dell'associazione AFK PROGETTO GIOVANI</a>
+        </section>
+    </main>
+</Layout>
+
+<style>
+    #placeholder1 {
+        height: 8.375rem;
+    }
+    #placeholder2 {
+        height: 12rem;
+    }
+
+    a {
+        text-align: center;
+        text-decoration: underline;
+    }
+
+    .roadmap-title {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-self: center;
+        gap: var(--space-s);
+        width: max-content;
+        padding: 0 var(--space-m);
+        background: var(--white-1);
+    }
+
+    .icon-list {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-m);
+    }
+    .icon-list p {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: var(--space-s);
+        color: var(--black-1);
+    }
+    .icon-list i {
+        font-size: 1.5625rem;
+    }
+</style>

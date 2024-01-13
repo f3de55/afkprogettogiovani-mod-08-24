@@ -3,6 +3,7 @@
 
 ## TODO
 TODO:
+- Negli elenchi a punti tipo I NOSTRI OBIETTIVI e event-card, rendere la roba icona-lista un componente e farlo meglio
 
 DONE:
 - Creare delle variabili CSS per tutti i padding, font size, color ecc.

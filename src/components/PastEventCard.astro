@@ -1,0 +1,36 @@
+---
+import ButtonLink from './ButtonLink.astro';
+
+const { title, description, date } = Astro.props
+---
+
+<div class="past-event-card">
+    <div class="past-event-text">
+        <h4>{title}</h4>
+        <p>{date}</p>
+        <p>{description}</p>
+        <ButtonLink url="#" text="Guarda le foto" />
+    </div>
+
+</div>
+
+<style>
+    .past-event-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        height: 18rem;
+        padding: var(--space-m);
+        background: var(--placeholder-gray);
+        border-radius: var(--border-radius);
+    }
+    .past-event-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-s);
+        padding: var(--space-s);
+        background: var(--pink-2);
+        border-radius: var(--border-radius);
+    }
+</style>

@@ -1,5 +1,5 @@
 ---
-const { title, place, date } = Astro.props;
+const { title, description, place, date } = Astro.props;
 
 import Button from './Button.astro';
 ---
@@ -9,6 +9,7 @@ import Button from './Button.astro';
         <div class="placeholder"></div>
         <div class="event-text">
             <h3>{title}</h3>
+            <p>{description}</p>
             <p class="bold"><i class="fa-solid fa-location-dot"></i>{place}</p>
             <p class="bold"><i class="fa-solid fa-clock"></i>{date}</p>
             <Button text="Scopri di più" />
@@ -32,6 +33,9 @@ import Button from './Button.astro';
         display: flex;
         flex-direction: column;
         gap: var(--space-s);
+    }
+    .event-text h3 {
+        text-align: left;
     }
     .event-text p {
         color: var(--black-1);
