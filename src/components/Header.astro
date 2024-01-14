@@ -1,7 +1,8 @@
 <header>
+    <!-- Logo -->
     <a href="/afkprogettogiovani" class="placeholder logo"></a>
 
-    <!-- Nav toggle -->
+    <!-- Hamburger button -->
     <input type="checkbox" class="nav-toggle" id="nav-toggle" />
     <label for="nav-toggle" class="hamburger-icon">
         <span></span>
@@ -9,6 +10,7 @@
         <span></span>
     </label>
 
+    <!-- Nav items -->
     <nav>
         <ul>
             <li><a class="bold" href="/afkprogettogiovani">Home</a></li>
@@ -26,11 +28,11 @@
         display: flex;
         align-items: center;
         position: fixed;
+        z-index: 10;
         width: calc(100% - var(--space-l) * 2);
         height: 3.38rem;
         top: 0;
         left: 0;
-        z-index: 10;
         padding: var(--space-m) var(--space-l);
         background: var(--white-3);
     }
@@ -39,7 +41,7 @@
         height: 3.38rem;
     }
     
-    /* Nav toggle */
+    /* Hamburger button */
     .nav-toggle {
         display: none;
     }
@@ -79,11 +81,6 @@
         top: var(--header-height);
         left: 0;
         background: var(--pink-2);
-    }
-    nav::after {
-        content: url('/afkprogettogiovani/nav-drip.svg');
-        width: 200px;
-        height: 200px;
     }
     ul {
         display: flex;

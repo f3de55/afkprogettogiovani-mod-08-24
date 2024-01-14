@@ -6,7 +6,7 @@ import ButtonLink from './ButtonLink.astro';
     <video autoplay muted loop>
         <source src="/afkprogettogiovani/hero-video.mp4" />
     </video>
-    <div class="hero-text">
+    <div class="text">
         <h1>AFK PROGETTO GIOVANI</h1>
         <p>Lorem ipsum dolor sit amet.</p>
         <ButtonLink url="/afkprogettogiovani/chi-siamo" text="Scopri chi siamo" />
@@ -22,10 +22,9 @@ import ButtonLink from './ButtonLink.astro';
         height: 31.75rem;
         object-fit: cover;
     }
-    .hero-text {
+    .text {
         display: flex;
         flex-direction: column;
-
         gap: var(--space-s);
         position: absolute;
         top: 50%;
@@ -34,10 +33,10 @@ import ButtonLink from './ButtonLink.astro';
         text-align: center;
         white-space: nowrap;
     }
-    .hero-text h1 {
+    .text h1 {
         color: var(--white-2);
     }
-    .hero-text p {
+    .text p {
         color: var(--white-2);
     }
 </style>
