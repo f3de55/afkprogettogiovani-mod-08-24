@@ -2,6 +2,7 @@
 const { title, text, date, place } = Astro.props;
 
 import Button from './Button.astro';
+import ButtonLink from './ButtonLink.astro';
 ---
 
 <div class="card">
@@ -14,6 +15,22 @@ import Button from './Button.astro';
         <Button text="Scopri di più" />
     </div>
 </div>
+
+<dialog open>
+    <h2>{title.toUpperCase()}</h2>
+    <div class="modal-info">
+        <h3>
+            {place}<br/>
+            {date}
+        </h3>
+    </div>
+    <p>{text}</p>
+    <p class="bold"><i class="fa-solid fa-location-dot"></i>{place}</p>
+    <p class="bold"><i class="fa-solid fa-clock"></i>{date}</p>
+    <p class="bold"><i class="fa-solid fa-euro-sign"></i>Ingresso a offerta libera</p>
+    <ButtonLink url="#" text="Prenota i biglietti" />
+    <div class="placeholder" id="placeholder2"></div>
+</dialog>
 
 <style>
     .card {
@@ -32,11 +49,34 @@ import Button from './Button.astro';
     .info p {
         color: var(--black-1);
     }
-    .info i {
+    i {
         margin-right: var(--space-s);
+    }
+
+    dialog {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-m);
+        position: fixed;
+        z-index: 3;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        padding: var(--space-m) var(--space-l);
+        border: 0;
+        border-radius: var(--border-radius);
+        background-color: var(--pink-2);
+    }
+    .modal-info {
+        padding: var(--space-s) 0;
+        border-radius: var(--border-radius);
+        background: var(--white-3);
     }
 
     #placeholder1 {
         height: 9.125rem;
+    }
+    #placeholder2 {
+        height: 10.6875rem;
     }
 </style>

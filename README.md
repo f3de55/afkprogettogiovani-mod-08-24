@@ -4,6 +4,7 @@
 ## TODO
 TODO:
 - Lavorare al modale per EventCard
+- Nei pulsanti, fare in modo che si possa personalizzare l'icona usando class fa ecc. come nei bulletpoint, magari mettere predefinita nei props la freccia a destra
 - Inserire delle immagini al posto dei placeholder, anche la stessa immagine a caso, per vedere se funziona tutto correttamente
 - Rendere video nell'hero più performante: https://blog.logrocket.com/optimizing-video-backgrounds-css-javascript/#making-video-backgrounds-performant
 
