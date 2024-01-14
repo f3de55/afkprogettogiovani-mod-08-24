@@ -5,6 +5,7 @@
 TODO:
 - Lavorare al modale per EventCard
 - Inserire delle immagini al posto dei placeholder, anche la stessa immagine a caso, per vedere se funziona tutto correttamente
+- Rendere video nell'hero più performante: https://blog.logrocket.com/optimizing-video-backgrounds-css-javascript/#making-video-backgrounds-performant
 
 DONE:
 - Creare delle variabili CSS per tutti i padding, font size, color ecc.
