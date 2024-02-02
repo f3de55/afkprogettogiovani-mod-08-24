@@ -24,7 +24,7 @@ import ButtonLink from './ButtonLink.astro';
         <p class="bold"><i class="fa-solid fa-location-dot"></i>{place}</p>
         <p class="bold"><i class="fa-solid fa-clock"></i>{date}</p>
         <p class="bold"><i class="fa-solid fa-euro-sign"></i>Ingresso a offerta libera</p>
-        <ButtonLink url="#" text="Prenota i biglietti" />
+        <ButtonLink url="#" text="Prenota i biglietti" icon="fa-solid fa-ticket" />
         <div class="placeholder" id="placeholder2"></div>
     </div>
 </aside>
@@ -95,6 +95,7 @@ import ButtonLink from './ButtonLink.astro';
         modal.style.display = (modal.style.display === 'flex') ? 'none' : 'flex';
     }
 
+    // Add toggle modal event listeners
     let modal = document.getElementsByTagName('aside')[0];
     document.getElementsByTagName('button')[0].addEventListener('click', () => {
         toggleModal(modal);

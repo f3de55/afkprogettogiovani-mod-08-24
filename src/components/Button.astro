@@ -1,9 +1,9 @@
 ---
-const { text } = Astro.props;
+const { text, icon = "fa-solid fa-chevron-right" } = Astro.props;
 ---
 
 <button class="bold" type="button">
-    {text} <i class="fa-solid fa-chevron-right"></i>
+    {text} <i class={icon}></i>
 </button>
 
 <style>

@@ -1,9 +1,9 @@
 ---
-const { url, text } = Astro.props;
+const { url, text, icon = "fa-solid fa-chevron-right" } = Astro.props;
 ---
 
 <a class="bold" href={url}>
-    {text} <i class="fa-solid fa-chevron-right"></i>
+    {text} <i class={icon}></i>
 </a>
 
 <style>
