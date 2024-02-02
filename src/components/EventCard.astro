@@ -16,21 +16,18 @@ import ButtonLink from './ButtonLink.astro';
     </div>
 </div>
 
-<dialog open>
-    <h2>{title.toUpperCase()}</h2>
-    <div class="modal-info">
-        <h3>
-            {place}<br/>
-            {date}
-        </h3>
+<aside>
+    <div class="modal">
+        <span id="modal-close"><i class="fa-solid fa-xmark"></i></span>
+        <h2>{title.toUpperCase()}</h2>
+        <p>{text}</p>
+        <p class="bold"><i class="fa-solid fa-location-dot"></i>{place}</p>
+        <p class="bold"><i class="fa-solid fa-clock"></i>{date}</p>
+        <p class="bold"><i class="fa-solid fa-euro-sign"></i>Ingresso a offerta libera</p>
+        <ButtonLink url="#" text="Prenota i biglietti" />
+        <div class="placeholder" id="placeholder2"></div>
     </div>
-    <p>{text}</p>
-    <p class="bold"><i class="fa-solid fa-location-dot"></i>{place}</p>
-    <p class="bold"><i class="fa-solid fa-clock"></i>{date}</p>
-    <p class="bold"><i class="fa-solid fa-euro-sign"></i>Ingresso a offerta libera</p>
-    <ButtonLink url="#" text="Prenota i biglietti" />
-    <div class="placeholder" id="placeholder2"></div>
-</dialog>
+</aside>
 
 <style>
     .card {
@@ -53,24 +50,36 @@ import ButtonLink from './ButtonLink.astro';
         margin-right: var(--space-s);
     }
 
-    dialog {
+    aside {
+        display: none;
+        position: fixed;
+        z-index: 3;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.8);
+    }
+    .modal {
         display: flex;
         flex-direction: column;
         gap: var(--space-m);
-        position: fixed;
-        z-index: 3;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
+        position: absolute;
+        top: var(--space-l);
         padding: var(--space-m) var(--space-l);
-        border: 0;
         border-radius: var(--border-radius);
         background-color: var(--pink-2);
     }
-    .modal-info {
+    .modal h2 {
         padding: var(--space-s) 0;
-        border-radius: var(--border-radius);
         background: var(--white-3);
+    }
+    .modal span {
+        position: absolute;
+        top: 0.625rem;
+        right: 0;
+        color: var(--pink-9);
+        font-size: 1.5625rem;
     }
 
     #placeholder1 {
@@ -80,3 +89,17 @@ import ButtonLink from './ButtonLink.astro';
         height: 10.6875rem;
     }
 </style>
+
+<script>
+    function toggleModal(modal) {
+        modal.style.display = (modal.style.display === 'flex') ? 'none' : 'flex';
+    }
+
+    let modal = document.getElementsByTagName('aside')[0];
+    document.getElementsByTagName('button')[0].addEventListener('click', () => {
+        toggleModal(modal);
+    });
+    document.getElementById('modal-close').addEventListener('click', () => {
+        toggleModal(modal);
+    });
+</script>
