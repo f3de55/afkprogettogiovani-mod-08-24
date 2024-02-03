@@ -2,8 +2,9 @@
 import Layout from '../layouts/Layout.astro';
 import PageTitle from '../components/PageTitle.astro';
 import BulletPoint from '../components/BulletPoint.astro';
+import TextImage from '../components/TextImage.astro';
+import FeaturedPoints from '../components/FeaturedPoints.astro';
 
-import { Image } from 'astro:assets';
 import chisiamoImage from '../assets/chi-siamo.jpg';
 ---
 
@@ -11,31 +12,17 @@ import chisiamoImage from '../assets/chi-siamo.jpg';
     <main>
         <PageTitle title="SOSTENITORI" img="/afkprogettogiovani/chi-siamo.jpg" />
         <section class="section-light">
-            <div>
+            <TextImage img={chisiamoImage} alt="Una foto di noi">
                 <h2>I NOSTRI AMICI SOSTENITORI</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui.</p>
-            </div>
-            <div>
-                <Image src={chisiamoImage} alt="Una foto di noi" />
-            </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui.</p>    
+            </TextImage>
         </section>
         <section>
-            <div>
-                <h2>VUOI SUPPORTARCI ANCHE TU?</h2>
-                <div class="bullet-points">
-                    <BulletPoint icon="fa-solid fa-credit-card" text="Attraverso una donazione, IBAN: IT47W062300957200005712447" />
-                    <BulletPoint icon="fa-brands fa-cc-paypal" text="Attraverso PayPal, da qui" /> 
-                </div>   
-            </div>
+            <h2>VUOI SUPPORTARCI ANCHE TU?</h2>
+            <FeaturedPoints>
+                <BulletPoint icon="fa-solid fa-credit-card" text="Attraverso una donazione, IBAN: IT47W062300957200005712447" />
+                <BulletPoint icon="fa-brands fa-cc-paypal" text="Attraverso PayPal, da qui" /> 
+            </FeaturedPoints>  
         </section>
     </main>
 </Layout>
-
-<style>
-    @media screen and (min-width: 1000px) {
-        .bullet-points {
-            display: flex;
-            gap: var(--space-s);
-        }
-    }
-</style>

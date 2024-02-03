@@ -2,13 +2,13 @@
 import Layout from '../layouts/Layout.astro';
 import PageTitle from '../components/PageTitle.astro';
 import ContactInfo from '../components/ContactInfo.astro';
-
-import { Image } from 'astro:assets';
 ---
 
 <Layout title="Contatti - AFK Progetto Giovani">
     <main>
         <PageTitle title="CONTATTI" img="/afkprogettogiovani/chi-siamo.jpg" />
-        <ContactInfo />
+        <section class="section-light">
+            <ContactInfo />
+        </section>
     </main>
 </Layout>

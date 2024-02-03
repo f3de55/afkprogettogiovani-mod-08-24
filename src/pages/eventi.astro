@@ -3,8 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import PageTitle from '../components/PageTitle.astro';
 import EventCard from '../components/EventCard.astro';
 import PastEventCard from '../components/PastEventCard.astro';
+import PastEventsGrid from '../components/PastEventsGrid.astro';
 
-import { Image } from 'astro:assets';
 import chisiamoImage from '../assets/chi-siamo.jpg';
 ---
 
@@ -12,34 +12,17 @@ import chisiamoImage from '../assets/chi-siamo.jpg';
     <main>
         <PageTitle title="EVENTI" img="/afkprogettogiovani/chi-siamo.jpg" />
         <section>
-            <div>
-                <h2>PROSSIMI EVENTI</h2>
-                <EventCard title="Il sentiero d'argento" text="Un giovane becchino, un filosofo dimenticato e un trattato proibito: questa storia racconta quanto può essere potente un'idea, anche quando il mondo la ignora" date="Sabato 8 giu 2024" place="Auditorium Padre Reina Rho" img={chisiamoImage} alt="Una foto di noi" />    
-            </div>
+            <h2>PROSSIMI EVENTI</h2>
+            <EventCard title="Il sentiero d'argento" text="Un giovane becchino, un filosofo dimenticato e un trattato proibito: questa storia racconta quanto può essere potente un'idea, anche quando il mondo la ignora" date="Sabato 8 giu 2024" place="Auditorium Padre Reina Rho" img={chisiamoImage} alt="Una foto di noi" />    
         </section>
         <section class="section-light">
-            <div>
-                <h2>EVENTI PASSATI</h2>
-                <div class="past-events-grid">
-                    <PastEventCard title="Ho bisogno di poesia" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." date="8 ottobre 2022" img="/afkprogettogiovani/chi-siamo.jpg" />
-                    <PastEventCard title="Ho bisogno di poesia" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." date="8 ottobre 2022" img="/afkprogettogiovani/chi-siamo.jpg" />
-                    <PastEventCard title="Ho bisogno di poesia" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." date="8 ottobre 2022" img="/afkprogettogiovani/chi-siamo.jpg" />
-                    <PastEventCard title="Ho bisogno di poesia" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." date="8 ottobre 2022" img="/afkprogettogiovani/chi-siamo.jpg" />
-                </div>
-            </div>
+            <h2>EVENTI PASSATI</h2>
+            <PastEventsGrid>
+                <PastEventCard title="Ho bisogno di poesia" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." date="8 ottobre 2022" img="/afkprogettogiovani/chi-siamo.jpg" />
+                <PastEventCard title="Ho bisogno di poesia" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." date="8 ottobre 2022" img="/afkprogettogiovani/chi-siamo.jpg" />
+                <PastEventCard title="Ho bisogno di poesia" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." date="8 ottobre 2022" img="/afkprogettogiovani/chi-siamo.jpg" />
+                <PastEventCard title="Ho bisogno di poesia" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." date="8 ottobre 2022" img="/afkprogettogiovani/chi-siamo.jpg" />
+            </PastEventsGrid>
         </section>
     </main>
 </Layout>
-
-<style>
-    .past-events-grid {
-        display: grid;
-        gap: var(--space-m);
-    }
-
-    @media screen and (min-width: 1000px) {
-        .past-events-grid {
-            grid-template-columns: 1fr 1fr;
-        }
-    }
-</style>
