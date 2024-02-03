@@ -4,7 +4,7 @@ const {icon, text} = Astro.props;
 
 <div>
     <i class={icon}></i>
-    <p>{text}</p>
+    <p class="bold">{text}</p>
 </div>
 
 <style>
@@ -16,5 +16,11 @@ const {icon, text} = Astro.props;
     }
     i {
         font-size: 1.5625rem;
+    }
+
+    @media screen and (min-width: 1000px) {
+        i {
+            font-size: 3.125rem;
+        }
     }
 </style>

@@ -74,6 +74,11 @@ import Footer from '../components/Footer.astro';
         gap: var(--space-m);
         padding: var(--space-l);
     }
+    section > div {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-m);
+    }
     section > p {
         text-align: center;
     }
@@ -140,5 +145,52 @@ import Footer from '../components/Footer.astro';
     .bold {
         font-weight: 700;
         line-height: 120%;
+    }
+
+    @media screen and (min-width: 1000px) {
+        :root {
+            --header-height: 7.5051875rem;
+
+            --space-l: 8.25rem;
+            --space-m: 4.125rem;
+            --space-s: 2.0625rem;
+        }
+
+        section {
+            flex-direction: row;
+            align-items: center;
+            padding: var(--space-m) var(--space-l);
+        }
+        section > div {
+            align-items: center;
+            gap: var(--space-s);
+            width: 100%;
+        }
+
+        /* Typography */
+        h1 {
+            font-size: 2.5625rem;
+        }
+        h2 {
+            font-size: 2.25rem;
+        }
+        h3 {
+            font-size: 2rem;
+        }
+        h4 {
+            font-size: 1.8125rem;
+        }
+        h5 {
+            font-size: 1.625rem;
+        }
+        h6 {
+            font-size: 1.4375rem;
+            line-height: 140%;
+        }
+
+        p, a, button {
+            font-size: 1.25rem;
+            line-height: 120%;
+        }
     }
 </style>

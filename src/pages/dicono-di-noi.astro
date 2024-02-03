@@ -3,17 +3,22 @@ import Layout from '../layouts/Layout.astro';
 import PageTitle from '../components/PageTitle.astro';
 
 import { Image } from 'astro:assets';
+import chisiamoImage from '../assets/chi-siamo.jpg';
 ---
 
 <Layout title="Dicono di noi - AFK Progetto Giovani">
     <main>
         <PageTitle title="DICONO DI NOI" />
         <section>
-            <h2>COSA NE PENSANO DEL NOSTRO PROGETTO?</h2>
-            <div class="placeholder" id="placeholder1"></div>
-            <div class="placeholder" id="placeholder1"></div>
-            <div class="placeholder" id="placeholder1"></div>
-            <div class="placeholder" id="placeholder1"></div>
+            <div>
+                <h2>COSA NE PENSANO DEL NOSTRO PROGETTO?</h2>
+                <Image src={chisiamoImage} alt="Una foto di noi" />
+                <Image src={chisiamoImage} alt="Una foto di noi" />
+                <Image src={chisiamoImage} alt="Una foto di noi" />
+                <Image src={chisiamoImage} alt="Una foto di noi" />
+                <Image src={chisiamoImage} alt="Una foto di noi" />
+                <Image src={chisiamoImage} alt="Una foto di noi" />
+            </div>
         </section>
     </main>
 </Layout>

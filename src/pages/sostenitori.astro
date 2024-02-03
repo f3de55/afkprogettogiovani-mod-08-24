@@ -4,26 +4,27 @@ import PageTitle from '../components/PageTitle.astro';
 import BulletPoint from '../components/BulletPoint.astro';
 
 import { Image } from 'astro:assets';
+import chisiamoImage from '../assets/chi-siamo.jpg';
 ---
 
 <Layout title="Sostenitori - AFK Progetto Giovani">
     <main>
         <PageTitle title="SOSTENITORI" />
         <section class="section-light">
-            <h2>I NOSTRI AMICI SOSTENITORI</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui.</p>
-            <div class="placeholder" id="placeholder1"></div>
+            <div>
+                <h2>I NOSTRI AMICI SOSTENITORI</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui.</p>
+            </div>
+            <div>
+                <Image src={chisiamoImage} alt="Una foto di noi" />
+            </div>
         </section>
         <section>
-            <h2>VUOI SUPPORTARCI ANCHE TU?</h2>
-            <BulletPoint icon="fa-solid fa-credit-card" text="Attraverso una donazione, IBAN: IT47W062300957200005712447" />
-            <BulletPoint icon="fa-brands fa-cc-paypal" text="Attraverso PayPal, da qui" />
+            <div>
+                <h2>VUOI SUPPORTARCI ANCHE TU?</h2>
+                <BulletPoint icon="fa-solid fa-credit-card" text="Attraverso una donazione, IBAN: IT47W062300957200005712447" />
+                <BulletPoint icon="fa-brands fa-cc-paypal" text="Attraverso PayPal, da qui" />    
+            </div>
         </section>
     </main>
 </Layout>
-
-<style>
-    #placeholder1 {
-        height: 10.25rem;
-    }
-</style>

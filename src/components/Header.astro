@@ -93,4 +93,23 @@
     ul li a {
         display: block;
     }
+
+    @media screen and (min-width: 1000px) {
+        header {
+            padding: var(--space-s) var(--space-l);
+        }
+
+        .hamburger-icon {
+            display: none;
+        }
+
+        nav {
+            display: block;
+            position: static;
+            background: transparent;
+        }
+        ul {
+            flex-direction: row;
+        }
+    }
 </style>

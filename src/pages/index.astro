@@ -14,23 +14,33 @@ import chisiamoImage from '../assets/chi-siamo.jpg';
     <main>
         <Hero />
         <section class="section-light">
-            <h2>CHI SIAMO?</h2>
-            <p>Siamo un gruppo di giovani, con la passione per ogni forma d’arte. Insieme impariamo a valorizzare i nostri talenti. Dal 2022 grazie a chi ha creduto in noi.</p>
-            <Image src={chisiamoImage} alt="Una foto di noi" />
+            <div>
+                <h2>CHI SIAMO?</h2>
+                <p>Siamo un gruppo di giovani, con la passione per ogni forma d’arte. Insieme impariamo a valorizzare i nostri talenti. Dal 2022 grazie a chi ha creduto in noi.</p>        
+            </div>
+            <div>
+                <Image src={chisiamoImage} alt="Una foto di noi" />
+            </div>
         </section>
         <section>
-            <h2>PROSSIMI EVENTI</h2>
-            <EventCard title="Il sentiero d'argento" text="Un giovane becchino, un filosofo dimenticato e un trattato proibito: questa storia racconta quanto può essere potente un'idea, anche quando il mondo la ignora" date="Sabato 8 giu 2024" place="Auditorium Padre Reina Rho" />
+            <div>
+                <h2>PROSSIMI EVENTI</h2>
+                <EventCard title="Il sentiero d'argento" text="Un giovane becchino, un filosofo dimenticato e un trattato proibito: questa storia racconta quanto può essere potente un'idea, anche quando il mondo la ignora" date="Sabato 8 giu 2024" place="Auditorium Padre Reina Rho" img={chisiamoImage} alt="Una foto di noi" />
+            </div>
         </section>
         <section>
-            <h2>EVENTI PASSATI</h2>
-            <div class="placeholder" id="placeholder1"></div>
-            <ButtonLink url="/afkprogettogiovani/eventi" text="Guarda tutto" />
+            <div>
+                <h2>EVENTI PASSATI</h2>
+                <Image src={chisiamoImage} alt="Una foto di noi" />
+                <ButtonLink url="/afkprogettogiovani/eventi" text="Guarda tutto" />
+            </div>
         </section>
         <section class="section-light">
-            <h2>AMICI SOSTENITORI</h2>
-            <p>I nostri amici sostenitori ci permettono di continuare a realizzare i nostri sogni!</p>
-            <div class="placeholder" id="placeholder2"></div>
+            <div>
+                <h2>AMICI SOSTENITORI</h2>
+                <p>I nostri amici sostenitori ci permettono di continuare a realizzare i nostri sogni!</p>
+                <Image src={chisiamoImage} alt="Una foto di noi" />
+            </div>
         </section>
         <section>
             <h2>DICONO DI NOI</h2>
@@ -43,12 +53,3 @@ import chisiamoImage from '../assets/chi-siamo.jpg';
         <ContactInfo />
     </main>
 </Layout>
-
-<style>
-    #placeholder1 {
-        height: 16.4rem;
-    }
-    #placeholder2 {
-        height: 10.3rem;
-    }
-</style>

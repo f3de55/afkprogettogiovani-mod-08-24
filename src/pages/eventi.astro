@@ -3,22 +3,25 @@ import Layout from '../layouts/Layout.astro';
 import PageTitle from '../components/PageTitle.astro';
 import EventCard from '../components/EventCard.astro';
 import PastEventCard from '../components/PastEventCard.astro';
+
+import { Image } from 'astro:assets';
+import chisiamoImage from '../assets/chi-siamo.jpg';
 ---
 
 <Layout title="Eventi - AFK Progetto Giovani">
     <main>
         <PageTitle title="EVENTI" />
         <section>
-            <h2>PROSSIMI EVENTI</h2>
-            <EventCard title="Il sentiero d'argento" text="Un giovane becchino, un filosofo dimenticato e un trattato proibito: questa storia racconta quanto può essere potente un'idea, anche quando il mondo la ignora" date="Sabato 8 giu 2024" place="Auditorium Padre Reina Rho" />
+            <div>
+                <h2>PROSSIMI EVENTI</h2>
+                <EventCard title="Il sentiero d'argento" text="Un giovane becchino, un filosofo dimenticato e un trattato proibito: questa storia racconta quanto può essere potente un'idea, anche quando il mondo la ignora" date="Sabato 8 giu 2024" place="Auditorium Padre Reina Rho" img={chisiamoImage} alt="Una foto di noi" />    
+            </div>
         </section>
         <section class="section-light">
-            <h2>EVENTI PASSATI</h2>
-            <PastEventCard title="Ho bisogno di poesia" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." date="8 ottobre 2022" />
+            <div>
+                <h2>EVENTI PASSATI</h2>
+                <PastEventCard title="Ho bisogno di poesia" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." date="8 ottobre 2022" />    
+            </div>
         </section>
     </main>
 </Layout>
-
-<style>
-
-</style>

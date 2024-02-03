@@ -1,17 +1,22 @@
 ---
-const { title, text, date, place } = Astro.props;
+const { title, text, date, place, img, alt } = Astro.props;
 
 import Button from './Button.astro';
 import ButtonLink from './ButtonLink.astro';
+import BulletPoint from './BulletPoint.astro';
+
+import { Image } from 'astro:assets';
 ---
 
 <div class="card">
-    <div class="placeholder" id="placeholder1"></div>
+    <div>
+        <Image src={img} alt={alt} />
+    </div>
     <div class="info">
         <h3>{title}</h3>
         <p>{text}</p>
-        <p class="bold"><i class="fa-solid fa-location-dot"></i>{place}</p>
-        <p class="bold"><i class="fa-solid fa-clock"></i>{date}</p>
+        <BulletPoint icon="fa-solid fa-location-dot" text={place} />
+        <BulletPoint icon="fa-solid fa-clock" text={date} />
         <Button text="Scopri di più" />
     </div>
 </div>
@@ -21,6 +26,7 @@ import ButtonLink from './ButtonLink.astro';
         <span id="modal-close"><i class="fa-solid fa-xmark"></i></span>
         <h2>{title.toUpperCase()}</h2>
         <p>{text}</p>
+
         <p class="bold"><i class="fa-solid fa-location-dot"></i>{place}</p>
         <p class="bold"><i class="fa-solid fa-clock"></i>{date}</p>
         <p class="bold"><i class="fa-solid fa-euro-sign"></i>Ingresso a offerta libera</p>
@@ -48,6 +54,7 @@ import ButtonLink from './ButtonLink.astro';
     }
     i {
         margin-right: var(--space-s);
+        font-size: 3.125rem;
     }
 
     aside {
@@ -82,11 +89,14 @@ import ButtonLink from './ButtonLink.astro';
         font-size: 1.5625rem;
     }
 
-    #placeholder1 {
-        height: 9.125rem;
-    }
     #placeholder2 {
         height: 10.6875rem;
+    }
+
+    @media screen and (min-width: 1000px) {
+        .card {
+            flex-direction: row-reverse;
+        }
     }
 </style>
 

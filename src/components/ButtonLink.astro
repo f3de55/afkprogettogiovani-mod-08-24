@@ -18,4 +18,10 @@ const { url, text, icon = "fa-solid fa-chevron-right" } = Astro.props;
         background: var(--pink-3);
         color: var(--black-1);
     }
+
+    @media screen and (min-width: 1000px) {
+        a {
+            padding: var(--border-radius) var(--space-s);
+        }
+    }
 </style>

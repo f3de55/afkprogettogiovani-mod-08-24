@@ -2,61 +2,75 @@
 import Layout from '../layouts/Layout.astro';
 import PageTitle from '../components/PageTitle.astro';
 import BulletPoint from '../components/BulletPoint.astro';
+
+import { Image } from 'astro:assets';
+import chisiamoImage from '../assets/chi-siamo.jpg';
 ---
 
 <Layout title="Chi siamo - AFK Progetto Giovani">
     <main>
         <PageTitle title="CHI SIAMO?" />
         <section class="section-light">
-            <h2>LONTANO DAGLI SCHERMI FUORI DAGLI SCHEMI</h2>
-            <p>Siamo un gruppo composto da persone di diverse età con l'obiettivo di stare lontano dagli schermi ma fuori dagli schemi. Insieme impariamo a credere in noi stessi, attraverso nuove sfide e</p>
-            <div class="placeholder" id="placeholder1"></div>
+            <div>
+                <h2>LONTANO DAGLI SCHERMI, FUORI DAGLI SCHEMI</h2>
+                <p>Siamo un gruppo composto da persone di diverse età con l'obiettivo di stare lontano dagli schermi ma fuori dagli schemi. Insieme impariamo a credere in noi stessi, attraverso nuove sfide e</p>    
+            </div>
+            <div>
+                <Image src={chisiamoImage} alt="Una foto di noi" />
+            </div>
         </section>
         <section>
-            <h2>I NOSTRI OBIETTIVI</h2>
-            <BulletPoint icon="fa-solid fa-face-laugh-wink" text="Sostenere le nuove generazioni creando momenti di unione" />
-            <BulletPoint icon="fa-solid fa-masks-theater" text="Promuovere l'arte e la cultura" />
-            <BulletPoint icon="fa-solid fa-heart" text="Devolvere il ricavato degli spettacoli in beneficenza" />
+            <div>
+                <h2>I NOSTRI OBIETTIVI</h2>
+                <div class="bullet-points">
+                    <BulletPoint icon="fa-solid fa-face-laugh-wink" text="Sostenere le nuove generazioni creando momenti di unione" />
+                    <BulletPoint icon="fa-solid fa-masks-theater" text="Promuovere l'arte e la cultura" />
+                    <BulletPoint icon="fa-solid fa-heart" text="Devolvere il ricavato degli spettacoli in beneficenza" />
+                </div>
+            </div>
         </section>
         <section class="section-light">
-            <h2>I SOCI FONDATORI</h2>
-            <div class="placeholder" id="placeholder2"></div>
+            <div>
+                <h2>I SOCI FONDATORI</h2>
+                <Image src={chisiamoImage} alt="Una foto di noi" />
+            </div>
         </section>
         <section class="section-light">
-            <h2>TEAM SCRITTURA</h2>
-            <div class="placeholder" id="placeholder2"></div>
+            <div>
+                <h2>TEAM SCRITTURA</h2>
+                <Image src={chisiamoImage} alt="Una foto di noi" />
+            </div>
         </section>
         <section class="section-light">
-            <h2>TEAM COMUNICAZIONE</h2>
-            <div class="placeholder" id="placeholder2"></div>
+            <div>
+                <h2>TEAM COMUNICAZIONE</h2>
+                <Image src={chisiamoImage} alt="Una foto di noi" />
+            </div>
         </section>
         <section class="section-light">
-            <h2>LA NOSTRA STORIA</h2>
-            <h3 class="timeline-title"><i class="fa-solid fa-calendar"></i>2020</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Lorem ipsum dolor sit amet, consectetur</p>
-            <h3 class="timeline-title"><i class="fa-solid fa-calendar"></i>2021</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Lorem ipsum dolor sit amet, consectetur</p>
-            <h3 class="timeline-title"><i class="fa-solid fa-calendar"></i>2022</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Lorem ipsum dolor sit amet, consectetur</p>
-            <h3 class="timeline-title"><i class="fa-solid fa-calendar"></i>2023</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Lorem ipsum dolor sit amet, consectetur</p>
-            <div class="placeholder" id="placeholder1"></div>
+            <div>
+                <h2>LA NOSTRA STORIA</h2>
+                <h3 class="timeline-title"><i class="fa-solid fa-calendar"></i>2020</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Lorem ipsum dolor sit amet, consectetur</p>
+                <h3 class="timeline-title"><i class="fa-solid fa-calendar"></i>2021</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Lorem ipsum dolor sit amet, consectetur</p>
+                <h3 class="timeline-title"><i class="fa-solid fa-calendar"></i>2022</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Lorem ipsum dolor sit amet, consectetur</p>
+                <h3 class="timeline-title"><i class="fa-solid fa-calendar"></i>2023</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Lorem ipsum dolor sit amet, consectetur</p>
+                <Image src={chisiamoImage} alt="Una foto di noi" />
+            </div>
         </section>
         <section class="section-light">
-            <h2>TRASPARENZA</h2>
-            <a href="#">Statuto dell'associazione AFK PROGETTO GIOVANI</a>
+            <div>
+                <h2>TRASPARENZA</h2>
+                <a href="#">Statuto dell'associazione AFK PROGETTO GIOVANI</a>    
+            </div>
         </section>
     </main>
 </Layout>
 
 <style>
-    #placeholder1 {
-        height: 8.375rem;
-    }
-    #placeholder2 {
-        height: 12rem;
-    }
-
     .timeline-title {
         display: flex;
         align-self: center;
@@ -68,5 +82,13 @@ import BulletPoint from '../components/BulletPoint.astro';
     a {
         text-align: center;
         text-decoration: underline;
+    }
+
+    @media screen and (min-width: 1000px) {
+        .bullet-points {
+            display: flex;
+            flex-direction: row;
+            gap: var(--space-l);
+        }
     }
 </style>
