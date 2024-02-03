@@ -2,6 +2,10 @@
 import Layout from '../layouts/Layout.astro';
 import PageTitle from '../components/PageTitle.astro';
 import BulletPoint from '../components/BulletPoint.astro';
+import TextImage from '../components/TextImage.astro';
+import FeaturedPoints from '../components/FeaturedPoints.astro';
+import TimelineItem from '../components/TimelineItem.astro';
+import TimelineGrid from '../components/TimelineGrid.astro';
 
 import { Image } from 'astro:assets';
 import chisiamoImage from '../assets/chi-siamo.jpg';
@@ -11,71 +15,44 @@ import chisiamoImage from '../assets/chi-siamo.jpg';
     <main>
         <PageTitle title="CHI SIAMO?" img="/afkprogettogiovani/chi-siamo.jpg" />
         <section class="section-light">
-            <div>
+            <TextImage img={chisiamoImage} alt="Una foto di noi">
                 <h2>LONTANO DAGLI SCHERMI, FUORI DAGLI SCHEMI</h2>
-                <p>Siamo un gruppo composto da persone di diverse età con l'obiettivo di stare lontano dagli schermi ma fuori dagli schemi. Insieme impariamo a credere in noi stessi, attraverso nuove sfide e</p>    
-            </div>
-            <div>
-                <Image src={chisiamoImage} alt="Una foto di noi" />
-            </div>
+                <p>Siamo un gruppo composto da persone di diverse età con l'obiettivo di stare lontano dagli schermi ma fuori dagli schemi. Insieme impariamo a credere in noi stessi, attraverso nuove sfide e</p>        
+            </TextImage>
         </section>
         <section>
-            <div>
-                <h2>I NOSTRI OBIETTIVI</h2>
-                <div class="bullet-points">
-                    <BulletPoint icon="fa-solid fa-face-laugh-wink" text="Sostenere le nuove generazioni creando momenti di unione" />
-                    <BulletPoint icon="fa-solid fa-masks-theater" text="Promuovere l'arte e la cultura" />
-                    <BulletPoint icon="fa-solid fa-heart" text="Devolvere il ricavato degli spettacoli in beneficenza" />
-                </div>
-            </div>
+            <h2>I NOSTRI OBIETTIVI</h2>
+            <FeaturedPoints>
+                <BulletPoint icon="fa-solid fa-face-laugh-wink" text="Sostenere le nuove generazioni creando momenti di unione" />
+                <BulletPoint icon="fa-solid fa-masks-theater" text="Promuovere l'arte e la cultura" />
+                <BulletPoint icon="fa-solid fa-heart" text="Devolvere il ricavato degli spettacoli in beneficenza" />
+            </FeaturedPoints>
         </section>
         <section class="section-light">
-            <div>
-                <h2>I SOCI FONDATORI</h2>
-                <Image src={chisiamoImage} alt="Una foto di noi" />
-            </div>
+            <h2>I SOCI FONDATORI</h2>
+            <Image src={chisiamoImage} alt="Una foto di noi" />
         </section>
         <section class="section-light">
-            <div>
-                <h2>TEAM SCRITTURA</h2>
-                <Image src={chisiamoImage} alt="Una foto di noi" />
-            </div>
+            <h2>TEAM SCRITTURA</h2>
+            <Image src={chisiamoImage} alt="Una foto di noi" />
         </section>
         <section class="section-light">
-            <div>
-                <h2>TEAM COMUNICAZIONE</h2>
-                <Image src={chisiamoImage} alt="Una foto di noi" />
-            </div>
+            <h2>TEAM COMUNICAZIONE</h2>
+            <Image src={chisiamoImage} alt="Una foto di noi" />
         </section>
         <section class="section-light">
-            <div>
-                <h2>LA NOSTRA STORIA</h2>
-                <div class="timeline-grid">
-                    <div>
-                        <h3 class="timeline-title"><i class="fa-solid fa-calendar"></i> 2020</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Lorem ipsum dolor sit amet, consectetur</p>
-                    </div>
-                    <div>
-                        <h3 class="timeline-title"><i class="fa-solid fa-calendar"></i> 2021</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Lorem ipsum dolor sit amet, consectetur</p>    
-                    </div>
-                    <div>
-                        <h3 class="timeline-title"><i class="fa-solid fa-calendar"></i> 2022</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Lorem ipsum dolor sit amet, consectetur</p>    
-                    </div>
-                    <div>
-                        <h3 class="timeline-title"><i class="fa-solid fa-calendar"></i> 2023</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Lorem ipsum dolor sit amet, consectetur</p>    
-                    </div>
-                </div>
-                <Image src={chisiamoImage} alt="Una foto di noi" />
-            </div>
+            <h2>LA NOSTRA STORIA</h2>
+            <TimelineGrid>
+                <TimelineItem title="2020" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+                <TimelineItem title="2021" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+                <TimelineItem title="2022" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+                <TimelineItem title="2023" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+            </TimelineGrid>
+            <Image src={chisiamoImage} alt="Una foto di noi" />
         </section>
         <section class="section-light">
-            <div>
-                <h2>TRASPARENZA</h2>
-                <a href="#">Statuto dell'associazione AFK PROGETTO GIOVANI</a>    
-            </div>
+            <h2>TRASPARENZA</h2>
+            <a href="#">Statuto dell'associazione AFK PROGETTO GIOVANI</a>    
         </section>
     </main>
 </Layout>

@@ -1,0 +1,38 @@
+---
+const { img, alt } = Astro.props;
+
+import { Image } from 'astro:assets';
+---
+
+<div class="text-image">
+    <div>
+        <slot />
+    </div>
+    <div>
+        <Image src={img} alt={alt} />
+    </div>
+</div>
+
+<style>
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-m);
+    }
+
+    @media screen and (min-width: 1000px) {
+        .text-image {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .text-image div {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-s);
+        }
+        img {
+            max-width: 50rem;
+        }
+    }
+</style>

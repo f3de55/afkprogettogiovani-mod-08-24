@@ -66,14 +66,11 @@ import Footer from '../components/Footer.astro';
     main {
         margin-top: var(--header-height);
     }
-    section, section > div {
+    section {
         display: flex;
         flex-direction: column;
         gap: var(--space-m);
         padding: var(--space-l);
-    }
-    section > div {
-        padding: 0;;
     }
     .section-light {
         background: var(--pink-1);
@@ -144,14 +141,8 @@ import Footer from '../components/Footer.astro';
         }
 
         section {
-            flex-direction: row;
-            align-items: center;
-            padding: var(--space-m) var(--space-l);
-        }
-        section > div {
-            align-items: center;
             gap: var(--space-s);
-            width: 100%;
+            padding: var(--space-m) var(--space-l);
         }
 
         /* Typography */

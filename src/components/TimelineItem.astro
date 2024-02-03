@@ -1,0 +1,31 @@
+---
+const { title, text } = Astro.props;
+---
+
+<div>
+    <h3><i class="fa-solid fa-calendar"></i> {title}</h3>
+    <p>{text}</p>
+</div>
+
+<style>
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-m);
+    }
+    h3 {
+        width: fit-content;
+        padding: 0 var(--space-m);
+        background: var(--white-1);
+    }
+
+    @media screen and (min-width: 1000px) {
+        div {
+            gap: var(--space-s);
+        }
+        h3 {
+            padding: var(--border-radius) var(--space-s);
+        }
+    }
+</style>
