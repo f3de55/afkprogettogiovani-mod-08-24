@@ -1,7 +1,7 @@
 ---
 import ButtonLink from './ButtonLink.astro';
 
-const { title, text, date } = Astro.props
+const { title, text, date, img } = Astro.props
 ---
 
 <div class="card">
@@ -13,7 +13,7 @@ const { title, text, date } = Astro.props
     </div>
 </div>
 
-<style>
+<style define:vars={{img: `url('${img}')`}}>
     .card {
         display: flex;
         flex-direction: column;
@@ -21,7 +21,8 @@ const { title, text, date } = Astro.props
         height: 18rem;
         padding: var(--space-m);
         border-radius: var(--border-radius);
-        background: var(--placeholder-gray);
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), var(--img);
+        background-position: center;
     }
     .info {
         display: flex;

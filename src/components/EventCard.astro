@@ -31,7 +31,7 @@ import { Image } from 'astro:assets';
         <p class="bold"><i class="fa-solid fa-clock"></i>{date}</p>
         <p class="bold"><i class="fa-solid fa-euro-sign"></i>Ingresso a offerta libera</p>
         <ButtonLink url="#" text="Prenota i biglietti" icon="fa-solid fa-ticket" />
-        <div class="placeholder" id="placeholder2"></div>
+        <Image src={img} alt={alt} />
     </div>
 </aside>
 
@@ -87,10 +87,6 @@ import { Image } from 'astro:assets';
         right: 0;
         color: var(--pink-9);
         font-size: 1.5625rem;
-    }
-
-    #placeholder2 {
-        height: 10.6875rem;
     }
 
     @media screen and (min-width: 1000px) {
