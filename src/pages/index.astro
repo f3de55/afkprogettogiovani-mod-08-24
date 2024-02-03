@@ -6,6 +6,7 @@ import EventCard from '../components/EventCard.astro';
 import CitationCard from '../components/CitationCard.astro';
 import CitationsGrid from '../components/CitationsGrid.astro';
 import ContactInfo from '../components/ContactInfo.astro';
+import TextImage from '../components/TextImage.astro';
 
 import { Image } from 'astro:assets';
 import chisiamoImage from '../assets/chi-siamo.jpg';
@@ -15,46 +16,38 @@ import chisiamoImage from '../assets/chi-siamo.jpg';
     <main>
         <Hero />
         <section class="section-light">
-            <div>
+            <TextImage img={chisiamoImage} alt="Una foto di noi">
                 <h2>CHI SIAMO?</h2>
-                <p>Siamo un gruppo di giovani, con la passione per ogni forma d’arte. Insieme impariamo a valorizzare i nostri talenti. Dal 2022 grazie a chi ha creduto in noi.</p>        
-            </div>
-            <div>
-                <Image src={chisiamoImage} alt="Una foto di noi" />
-            </div>
+                <p>Siamo un gruppo di giovani, con la passione per ogni forma d’arte. Insieme impariamo a valorizzare i nostri talenti. Dal 2022 grazie a chi ha creduto in noi.</p>            
+            </TextImage>
         </section>
         <section>
-            <div>
-                <h2>PROSSIMI EVENTI</h2>
-                <EventCard title="Il sentiero d'argento" text="Un giovane becchino, un filosofo dimenticato e un trattato proibito: questa storia racconta quanto può essere potente un'idea, anche quando il mondo la ignora" date="Sabato 8 giu 2024" place="Auditorium Padre Reina Rho" img={chisiamoImage} alt="Una foto di noi" />
-            </div>
+            <h2>PROSSIMI EVENTI</h2>
+            <EventCard title="Il sentiero d'argento" text="Un giovane becchino, un filosofo dimenticato e un trattato proibito: questa storia racconta quanto può essere potente un'idea, anche quando il mondo la ignora" date="Sabato 8 giu 2024" place="Auditorium Padre Reina Rho" img={chisiamoImage} alt="Una foto di noi" />
         </section>
         <section>
-            <div>
-                <h2>EVENTI PASSATI</h2>
-                <Image src={chisiamoImage} alt="Una foto di noi" />
-                <ButtonLink url="/afkprogettogiovani/eventi" text="Guarda tutto" />
-            </div>
+            <h2>EVENTI PASSATI</h2>
+            <Image src={chisiamoImage} alt="Una foto di noi" />
+            <ButtonLink url="/afkprogettogiovani/eventi" text="Guarda tutto" />
         </section>
         <section class="section-light">
-            <div>
+            <TextImage img={chisiamoImage} alt="Una foto di noi">
                 <h2>AMICI SOSTENITORI</h2>
                 <p>I nostri amici sostenitori ci permettono di continuare a realizzare i nostri sogni!</p>
-                <Image src={chisiamoImage} alt="Una foto di noi" />
-            </div>
+            </TextImage>
         </section>
         <section>
-            <div>
-                <h2>DICONO DI NOI</h2>
-                <CitationsGrid>
-                    <CitationCard title="Milano Lorenteggio" text="Doppio successo, tutto sold out per il musical “A Million Dreams”..." />
-                    <CitationCard title="Fondo DMD" text="Orgogliosi di essere stati i destinatari della solidarietà di AFK..." />
-                    <CitationCard title="Sempione News" text="I giovani fanno sognare il nuovo Teatro De Silva..." />
-                    <CitationCard title="Dal pubblico" text="COMPLIMENTI! COMPLIMENTI e ancora COMPLIMENTI..." />
-                </CitationsGrid>
-                <ButtonLink url="/afkprogettogiovani/dicono-di-noi" text="Guarda tutti" />
-            </div>
+            <h2>DICONO DI NOI</h2>
+            <CitationsGrid>
+                <CitationCard title="Milano Lorenteggio" text="Doppio successo, tutto sold out per il musical “A Million Dreams”..." />
+                <CitationCard title="Fondo DMD" text="Orgogliosi di essere stati i destinatari della solidarietà di AFK..." />
+                <CitationCard title="Sempione News" text="I giovani fanno sognare il nuovo Teatro De Silva..." />
+                <CitationCard title="Dal pubblico" text="COMPLIMENTI! COMPLIMENTI e ancora COMPLIMENTI..." />
+            </CitationsGrid>
+            <ButtonLink url="/afkprogettogiovani/dicono-di-noi" text="Guarda tutti" />
         </section>
-        <ContactInfo />
+        <section class="section-light">
+            <ContactInfo />
+        </section>
     </main>
 </Layout>
