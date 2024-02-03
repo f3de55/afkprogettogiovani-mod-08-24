@@ -20,8 +20,26 @@ import chisiamoImage from '../assets/chi-siamo.jpg';
         <section class="section-light">
             <div>
                 <h2>EVENTI PASSATI</h2>
-                <PastEventCard title="Ho bisogno di poesia" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." date="8 ottobre 2022" />    
+                <div class="past-events-grid">
+                    <PastEventCard title="Ho bisogno di poesia" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." date="8 ottobre 2022" />
+                    <PastEventCard title="Ho bisogno di poesia" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." date="8 ottobre 2022" />
+                    <PastEventCard title="Ho bisogno di poesia" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." date="8 ottobre 2022" />
+                    <PastEventCard title="Ho bisogno di poesia" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." date="8 ottobre 2022" />
+                </div>
             </div>
         </section>
     </main>
 </Layout>
+
+<style>
+    .past-events-grid {
+        display: grid;
+        gap: var(--space-m);
+    }
+
+    @media screen and (min-width: 1000px) {
+        .past-events-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+</style>

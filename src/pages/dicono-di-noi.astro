@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import PageTitle from '../components/PageTitle.astro';
+import CitationCard from '../components/CitationCard.astro';
+import CitationsGrid from '../components/CitationsGrid.astro';
 
 import { Image } from 'astro:assets';
 import chisiamoImage from '../assets/chi-siamo.jpg';
@@ -12,12 +14,12 @@ import chisiamoImage from '../assets/chi-siamo.jpg';
         <section>
             <div>
                 <h2>COSA NE PENSANO DEL NOSTRO PROGETTO?</h2>
-                <Image src={chisiamoImage} alt="Una foto di noi" />
-                <Image src={chisiamoImage} alt="Una foto di noi" />
-                <Image src={chisiamoImage} alt="Una foto di noi" />
-                <Image src={chisiamoImage} alt="Una foto di noi" />
-                <Image src={chisiamoImage} alt="Una foto di noi" />
-                <Image src={chisiamoImage} alt="Una foto di noi" />
+                <CitationsGrid>
+                    <CitationCard title="Milano Lorenteggio" text="Doppio successo, tutto sold out per il musical “A Million Dreams”..." />
+                    <CitationCard title="Fondo DMD" text="Orgogliosi di essere stati i destinatari della solidarietà di AFK..." />
+                    <CitationCard title="Sempione News" text="I giovani fanno sognare il nuovo Teatro De Silva..." />
+                    <CitationCard title="Dal pubblico" text="COMPLIMENTI! COMPLIMENTI e ancora COMPLIMENTI..." />
+                </CitationsGrid>
             </div>
         </section>
     </main>

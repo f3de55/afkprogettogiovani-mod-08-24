@@ -33,4 +33,11 @@ const { title, text, date } = Astro.props
         background: var(--pink-2);
         text-align: center;
     }
+
+    @media screen and (min-width: 1000px) {
+        .card {
+            height: 30rem;
+            padding: var(--space-s) var(--space-m);
+        }
+    }
 </style>

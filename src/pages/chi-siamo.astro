@@ -50,14 +50,24 @@ import chisiamoImage from '../assets/chi-siamo.jpg';
         <section class="section-light">
             <div>
                 <h2>LA NOSTRA STORIA</h2>
-                <h3 class="timeline-title"><i class="fa-solid fa-calendar"></i>2020</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Lorem ipsum dolor sit amet, consectetur</p>
-                <h3 class="timeline-title"><i class="fa-solid fa-calendar"></i>2021</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Lorem ipsum dolor sit amet, consectetur</p>
-                <h3 class="timeline-title"><i class="fa-solid fa-calendar"></i>2022</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Lorem ipsum dolor sit amet, consectetur</p>
-                <h3 class="timeline-title"><i class="fa-solid fa-calendar"></i>2023</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Lorem ipsum dolor sit amet, consectetur</p>
+                <div class="timeline-grid">
+                    <div>
+                        <h3 class="timeline-title"><i class="fa-solid fa-calendar"></i> 2020</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Lorem ipsum dolor sit amet, consectetur</p>
+                    </div>
+                    <div>
+                        <h3 class="timeline-title"><i class="fa-solid fa-calendar"></i> 2021</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Lorem ipsum dolor sit amet, consectetur</p>    
+                    </div>
+                    <div>
+                        <h3 class="timeline-title"><i class="fa-solid fa-calendar"></i> 2022</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Lorem ipsum dolor sit amet, consectetur</p>    
+                    </div>
+                    <div>
+                        <h3 class="timeline-title"><i class="fa-solid fa-calendar"></i> 2023</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Lorem ipsum dolor sit amet, consectetur</p>    
+                    </div>
+                </div>
                 <Image src={chisiamoImage} alt="Una foto di noi" />
             </div>
         </section>
@@ -71,11 +81,16 @@ import chisiamoImage from '../assets/chi-siamo.jpg';
 </Layout>
 
 <style>
+    .timeline-grid {
+        display: grid;
+        gap: var(--space-m);
+        text-align: center;
+    }
     .timeline-title {
-        display: flex;
-        align-self: center;
-        gap: var(--space-s);
+        display: inline-block;
+        margin-bottom: var(--space-s);
         padding: 0 var(--space-m);
+        border-radius: var(--border-radius);
         background: var(--white-1);
     }
 
@@ -89,6 +104,10 @@ import chisiamoImage from '../assets/chi-siamo.jpg';
             display: flex;
             flex-direction: row;
             gap: var(--space-l);
+        }
+
+        .timeline-grid {
+            grid-template-columns: 1fr 1fr;
         }
     }
 </style>

@@ -22,9 +22,20 @@ import chisiamoImage from '../assets/chi-siamo.jpg';
         <section>
             <div>
                 <h2>VUOI SUPPORTARCI ANCHE TU?</h2>
-                <BulletPoint icon="fa-solid fa-credit-card" text="Attraverso una donazione, IBAN: IT47W062300957200005712447" />
-                <BulletPoint icon="fa-brands fa-cc-paypal" text="Attraverso PayPal, da qui" />    
+                <div class="bullet-points">
+                    <BulletPoint icon="fa-solid fa-credit-card" text="Attraverso una donazione, IBAN: IT47W062300957200005712447" />
+                    <BulletPoint icon="fa-brands fa-cc-paypal" text="Attraverso PayPal, da qui" /> 
+                </div>   
             </div>
         </section>
     </main>
 </Layout>
+
+<style>
+    @media screen and (min-width: 1000px) {
+        .bullet-points {
+            display: flex;
+            gap: var(--space-s);
+        }
+    }
+</style>
