@@ -27,9 +27,11 @@ import { Image } from 'astro:assets';
         <h2>{title.toUpperCase()}</h2>
         <p>{text}</p>
 
-        <p class="bold"><i class="fa-solid fa-location-dot"></i>{place}</p>
-        <p class="bold"><i class="fa-solid fa-clock"></i>{date}</p>
-        <p class="bold"><i class="fa-solid fa-euro-sign"></i>Ingresso a offerta libera</p>
+        <div class="bullet-points">
+            <BulletPoint icon="fa-solid fa-location-dot" text={place} />
+            <BulletPoint icon="fa-solid fa-clock" text={date} />
+            <BulletPoint icon="fa-solid fa-euro-sign" text="Ingresso a offerta libera" />
+        </div>
         <ButtonLink url="#" text="Prenota i biglietti" icon="fa-solid fa-ticket" />
         <Image src={img} alt={alt} />
     </div>
@@ -54,7 +56,6 @@ import { Image } from 'astro:assets';
     }
     i {
         margin-right: var(--space-s);
-        font-size: 3.125rem;
     }
 
     aside {
@@ -87,11 +88,32 @@ import { Image } from 'astro:assets';
         right: 0;
         color: var(--pink-9);
         font-size: 1.5625rem;
+        cursor: pointer;
+    }
+    .bullet-points {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-m);
     }
 
     @media screen and (min-width: 1000px) {
         .card {
             flex-direction: row-reverse;
+        }
+        i {
+            font-size: 3.125rem;
+        }
+
+        .modal {
+            gap: var(--space-s);
+            width: calc(100vw - var(--space-l) * 2);
+            height: calc(100vh - var(--space-m) * 2);
+            top: 0;
+        }
+        .bullet-points {
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 0;
         }
     }
 </style>

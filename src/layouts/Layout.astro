@@ -66,19 +66,14 @@ import Footer from '../components/Footer.astro';
     main {
         margin-top: var(--header-height);
     }
-    section {
+    section, section > div {
         display: flex;
         flex-direction: column;
         gap: var(--space-m);
         padding: var(--space-l);
     }
     section > div {
-        display: flex;
-        flex-direction: column;
-        gap: var(--space-m);
-    }
-    section > p {
-        text-align: center;
+        padding: 0;;
     }
     .section-light {
         background: var(--pink-1);
@@ -95,7 +90,6 @@ import Footer from '../components/Footer.astro';
         margin: 0;
         padding: 0;
     }
-
     h1, h2, h3, h4, h5, h6 {
         font-weight: 400;
         line-height: 120%;
@@ -126,7 +120,6 @@ import Footer from '../components/Footer.astro';
         font-size: 1rem;
         line-height: 140%;
     }
-
     p, a, button {
         color: #000000;
         font-family: Lato;
@@ -144,6 +137,7 @@ import Footer from '../components/Footer.astro';
         :root {
             --header-height: 7.5051875rem;
 
+            /* Spaces used in margins and paddings */
             --space-l: 8.25rem;
             --space-m: 4.125rem;
             --space-s: 2.0625rem;
