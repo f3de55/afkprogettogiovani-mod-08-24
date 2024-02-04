@@ -3,6 +3,7 @@
 
 ## TODO
 TODO:
+- Scegliere un valore giusto per @media screen and (min-width: 1000px) ovvero il breakpoint mobile/desktop
 - Controllare robe inutilizzate negli import ecc.
 - Rendere video nell'hero più performante: https://blog.logrocket.com/optimizing-video-backgrounds-css-javascript/#making-video-backgrounds-performant
 
