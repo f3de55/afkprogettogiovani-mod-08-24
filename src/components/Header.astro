@@ -103,7 +103,8 @@ import logoImage from '../assets/afk-logo-bianco-trasparente.png';
 
     @media screen and (min-width: 1000px) {
         header {
-            padding: var(--space-s) var(--space-l);
+            width: calc(100% - var(--space-s) * 2);
+            padding: var(--space-s) var(--space-s);
         }
 
         .logo {
@@ -122,6 +123,19 @@ import logoImage from '../assets/afk-logo-bianco-trasparente.png';
         }
         ul {
             flex-direction: row;
+            gap: var(--space-s);
+            padding: var(--space-m) var(--space-m);
+        }
+    }
+    @media screen and (min-width: 1820px) {
+        header {
+            width: calc(100% - var(--space-l) * 2);
+            padding: var(--space-s) var(--space-l);
+        }
+
+        ul {
+            gap: var(--space-l);
+            padding: var(--space-m) var(--space-l);
         }
     }
 </style>

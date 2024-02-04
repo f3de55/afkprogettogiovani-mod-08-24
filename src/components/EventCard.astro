@@ -6,8 +6,6 @@ import ButtonLink from './ButtonLink.astro';
 import BulletPoint from './BulletPoint.astro';
 import TextImage from './TextImage.astro';
 import FeaturedBulletPoints from './FeaturedBulletPoints.astro';
-
-import { Image } from 'astro:assets';
 ---
 
 <div class="card">
@@ -80,10 +78,10 @@ import { Image } from 'astro:assets';
         }
         
         .modal {
+            width: calc(90% - var(--space-m) * 2);
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: min-content;
             padding: var(--space-m);
         }
         .modal span {
