@@ -4,36 +4,35 @@ const { title, text, date, place, img, alt } = Astro.props;
 import Button from './Button.astro';
 import ButtonLink from './ButtonLink.astro';
 import BulletPoint from './BulletPoint.astro';
+import TextImage from './TextImage.astro';
+import FeaturedBulletPoints from './FeaturedBulletPoints.astro';
 
 import { Image } from 'astro:assets';
 ---
 
 <div class="card">
-    <div>
-        <Image src={img} alt={alt} />
-    </div>
-    <div class="info">
+    <TextImage img={img} alt={alt} reverse=true>
         <h3>{title}</h3>
         <p>{text}</p>
         <BulletPoint icon="fa-solid fa-location-dot" text={place} />
         <BulletPoint icon="fa-solid fa-clock" text={date} />
         <Button text="Scopri di più" />
-    </div>
+    </TextImage>
 </div>
 
 <aside>
     <div class="modal">
+        <TextImage img={img} alt={alt}>
+            <h2>{title.toUpperCase()}</h2>
+            <p>{text}</p>
+            <FeaturedBulletPoints>
+                <BulletPoint icon="fa-solid fa-location-dot" text={place} />
+                <BulletPoint icon="fa-solid fa-clock" text={date} />
+                <BulletPoint icon="fa-solid fa-euro-sign" text="Ingresso a offerta libera" />
+            </FeaturedBulletPoints>
+            <ButtonLink url="#" text="Prenota i biglietti" icon="fa-solid fa-ticket" />
+        </TextImage>
         <span id="modal-close"><i class="fa-solid fa-xmark"></i></span>
-        <h2>{title.toUpperCase()}</h2>
-        <p>{text}</p>
-
-        <div class="bullet-points">
-            <BulletPoint icon="fa-solid fa-location-dot" text={place} />
-            <BulletPoint icon="fa-solid fa-clock" text={date} />
-            <BulletPoint icon="fa-solid fa-euro-sign" text="Ingresso a offerta libera" />
-        </div>
-        <ButtonLink url="#" text="Prenota i biglietti" icon="fa-solid fa-ticket" />
-        <Image src={img} alt={alt} />
     </div>
 </aside>
 
@@ -42,20 +41,6 @@ import { Image } from 'astro:assets';
         display: flex;
         flex-direction: column;
         gap: var(--space-m);
-    }
-    .info {
-        display: flex;
-        flex-direction: column;
-        gap: var(--space-s);
-    }
-    .info h3 {
-        text-align: left;
-    }
-    .info p {
-        color: var(--black-1);
-    }
-    i {
-        margin-right: var(--space-s);
     }
 
     aside {
@@ -69,11 +54,9 @@ import { Image } from 'astro:assets';
         background: rgba(0, 0, 0, 0.8);
     }
     .modal {
-        display: flex;
-        flex-direction: column;
-        gap: var(--space-m);
         position: absolute;
         top: var(--space-l);
+        left: 0;
         padding: var(--space-m) var(--space-l);
         border-radius: var(--border-radius);
         background-color: var(--pink-2);
@@ -85,35 +68,27 @@ import { Image } from 'astro:assets';
     .modal span {
         position: absolute;
         top: 0.625rem;
-        right: 0;
+        right: 0.625rem;
         color: var(--pink-9);
         font-size: 1.5625rem;
         cursor: pointer;
-    }
-    .bullet-points {
-        display: flex;
-        flex-direction: column;
-        gap: var(--space-m);
     }
 
     @media screen and (min-width: 1000px) {
         .card {
             flex-direction: row-reverse;
         }
-        i {
-            font-size: 3.125rem;
-        }
-
+        
         .modal {
-            gap: var(--space-s);
-            width: calc(100vw - var(--space-l) * 2);
-            height: calc(100vh - var(--space-m) * 2);
-            top: 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: min-content;
+            padding: var(--space-m);
         }
-        .bullet-points {
-            flex-direction: row;
-            justify-content: space-between;
-            gap: 0;
+        .modal span {
+            right: 1.25rem;
+            font-size: 3.125rem;
         }
     }
 </style>

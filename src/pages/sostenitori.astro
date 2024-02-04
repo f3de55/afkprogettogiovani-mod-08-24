@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import PageTitle from '../components/PageTitle.astro';
 import BulletPoint from '../components/BulletPoint.astro';
 import TextImage from '../components/TextImage.astro';
-import FeaturedPoints from '../components/FeaturedPoints.astro';
+import FeaturedBulletPoints from '../components/FeaturedBulletPoints.astro';
 
 import chisiamoImage from '../assets/chi-siamo.jpg';
 ---
@@ -19,10 +19,10 @@ import chisiamoImage from '../assets/chi-siamo.jpg';
         </section>
         <section>
             <h2>VUOI SUPPORTARCI ANCHE TU?</h2>
-            <FeaturedPoints>
+            <FeaturedBulletPoints>
                 <BulletPoint icon="fa-solid fa-credit-card" text="Attraverso una donazione, IBAN: IT47W062300957200005712447" />
                 <BulletPoint icon="fa-brands fa-cc-paypal" text="Attraverso PayPal, da qui" /> 
-            </FeaturedPoints>  
+            </FeaturedBulletPoints>  
         </section>
     </main>
 </Layout>

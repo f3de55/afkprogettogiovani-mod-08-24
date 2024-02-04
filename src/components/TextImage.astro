@@ -1,5 +1,5 @@
 ---
-const { img, alt } = Astro.props;
+const { img, alt, reverse = false } = Astro.props;
 
 import { Image } from 'astro:assets';
 ---
@@ -13,11 +13,14 @@ import { Image } from 'astro:assets';
     </div>
 </div>
 
-<style>
+<style define:vars={{mobileFlexDirection: reverse ? 'column-reverse' : 'column'}}>
     div {
         display: flex;
         flex-direction: column;
         gap: var(--space-m);
+    }
+    .text-image {
+        flex-direction: var(--mobileFlexDirection)
     }
 
     @media screen and (min-width: 1000px) {
