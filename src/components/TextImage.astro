@@ -20,7 +20,7 @@ import { Image } from 'astro:assets';
         gap: var(--space-m);
     }
     .text-image {
-        flex-direction: var(--mobileFlexDirection)
+        flex-direction: var(--mobileFlexDirection);
     }
 
     @media screen and (min-width: 1000px) {
@@ -30,8 +30,6 @@ import { Image } from 'astro:assets';
             align-items: center;
         }
         .text-image div {
-            display: flex;
-            flex-direction: column;
             gap: var(--space-s);
         }
     }

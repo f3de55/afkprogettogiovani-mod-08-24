@@ -8,14 +8,15 @@ import TimelineItem from '../components/TimelineItem.astro';
 import TimelineGrid from '../components/TimelineGrid.astro';
 
 import { Image } from 'astro:assets';
-import chisiamoImage from '../assets/chi-siamo.jpg';
+import chiSiamoImage from '../assets/chi-siamo.jpg';
+import laNostraStoriaImage from '../assets/la-nostra-storia.jpg';
 ---
 
 <Layout title="Chi siamo - AFK Progetto Giovani">
     <main>
         <PageTitle title="CHI SIAMO?" img="/afkprogettogiovani/chi-siamo.jpg" />
         <section class="section-light">
-            <TextImage img={chisiamoImage} alt="Una foto di noi">
+            <TextImage img={chiSiamoImage} alt="Una foto di noi">
                 <h2>LONTANO DAGLI SCHERMI, FUORI DAGLI SCHEMI</h2>
                 <p>Siamo un gruppo composto da persone di diverse età con l'obiettivo di stare lontano dagli schermi ma fuori dagli schemi. Insieme impariamo a credere in noi stessi, attraverso nuove sfide e</p>        
             </TextImage>
@@ -30,15 +31,15 @@ import chisiamoImage from '../assets/chi-siamo.jpg';
         </section>
         <section class="section-light">
             <h2>I SOCI FONDATORI</h2>
-            <Image src={chisiamoImage} alt="Una foto di noi" />
+            <Image src={chiSiamoImage} alt="Una foto di noi" />
         </section>
         <section class="section-light">
             <h2>TEAM SCRITTURA</h2>
-            <Image src={chisiamoImage} alt="Una foto di noi" />
+            <Image src={chiSiamoImage} alt="Una foto di noi" />
         </section>
         <section class="section-light">
             <h2>TEAM COMUNICAZIONE</h2>
-            <Image src={chisiamoImage} alt="Una foto di noi" />
+            <Image src={chiSiamoImage} alt="Una foto di noi" />
         </section>
         <section class="section-light">
             <h2>LA NOSTRA STORIA</h2>
@@ -48,7 +49,7 @@ import chisiamoImage from '../assets/chi-siamo.jpg';
                 <TimelineItem title="2022" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
                 <TimelineItem title="2023" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
             </TimelineGrid>
-            <Image src={chisiamoImage} alt="Una foto di noi" />
+            <Image src={laNostraStoriaImage} alt="Una foto di noi" />
         </section>
         <section class="section-light">
             <h2>TRASPARENZA</h2>

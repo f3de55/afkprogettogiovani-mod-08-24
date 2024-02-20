@@ -4,18 +4,19 @@ import PageTitle from '../components/PageTitle.astro';
 import BulletPoint from '../components/BulletPoint.astro';
 import TextImage from '../components/TextImage.astro';
 import FeaturedBulletPoints from '../components/FeaturedBulletPoints.astro';
+import TextVideo from '../components/TextVideo.astro';
 
-import chisiamoImage from '../assets/chi-siamo.jpg';
+import chiSiamoImage from '../assets/chi-siamo.jpg';
 ---
 
 <Layout title="Sostenitori - AFK Progetto Giovani">
     <main>
         <PageTitle title="SOSTENITORI" img="/afkprogettogiovani/chi-siamo.jpg" />
         <section class="section-light">
-            <TextImage img={chisiamoImage} alt="Una foto di noi">
-                <h2>I NOSTRI AMICI SOSTENITORI</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui.</p>    
-            </TextImage>
+            <TextVideo video="/afkprogettogiovani/amici-sostenitori.mp4">
+                <h2>AMICI SOSTENITORI</h2>
+                <p>I nostri amici sostenitori ci permettono di continuare a realizzare i nostri sogni!</p>
+            </TextVideo>
         </section>
         <section>
             <h2>VUOI SUPPORTARCI ANCHE TU?</h2>

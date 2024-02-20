@@ -1,0 +1,33 @@
+---
+const { video } = Astro.props;
+---
+
+<div class="text-video">
+    <div>
+        <slot />
+    </div>
+    <div>
+        <video controls width="720" height="405">
+            <source src={video} type="video/mp4" />
+        </video>
+    </div>
+</div>
+
+<style>
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-m);
+    }
+
+    @media screen and (min-width: 1000px) {
+        .text-video {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .text-video div {
+            gap: var(--space-s);
+        }
+    }
+</style>
