@@ -1,8 +1,12 @@
+---
+const { columns = 2 } = Astro.props;
+---
+
 <div>
     <slot />
 </div>
 
-<style>
+<style define:vars={{ columns }}>
     div {
         display: grid;
         gap: var(--space-m);
@@ -10,7 +14,7 @@
 
     @media screen and (min-width: 1000px) {
         div {
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(var(--columns), 1fr);
         }
     }
 </style>

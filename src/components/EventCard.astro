@@ -40,6 +40,9 @@ import FeaturedBulletPoints from './FeaturedBulletPoints.astro';
         flex-direction: column;
         gap: var(--space-m);
     }
+    .card h3 {
+        text-align: left;
+    }
 
     aside {
         display: none;
@@ -98,10 +101,6 @@ import FeaturedBulletPoints from './FeaturedBulletPoints.astro';
 
     // Add toggle modal event listeners
     let modal = document.getElementsByTagName('aside')[0];
-    document.getElementsByTagName('button')[0].addEventListener('click', () => {
-        toggleModal(modal);
-    });
-    document.getElementById('modal-close').addEventListener('click', () => {
-        toggleModal(modal);
-    });
+    document.getElementsByTagName('button')[0].addEventListener('click', () => toggleModal(modal));
+    document.getElementById('modal-close').addEventListener('click', () => toggleModal(modal));
 </script>

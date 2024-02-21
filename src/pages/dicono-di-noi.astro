@@ -1,20 +1,44 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import PageTitle from '../components/PageTitle.astro';
-import CitationCard from '../components/CitationCard.astro';
-import CitationsGrid from '../components/CitationsGrid.astro';
+import Layout from "../layouts/Layout.astro";
+import PageTitle from "../components/PageTitle.astro";
+import TestimonialsCard from "../components/TestimonialsCard.astro";
+import CitationsGrid from "../components/CitationsGrid.astro";
+
+import miLorenteggioImage from "../assets/testimonials/mi-lorenteggio.jpg";
+import dmdImage from "../assets/testimonials/dmd.png";
+import sempioneNewsImage from "../assets/testimonials/sempione-news.png";
 ---
 
 <Layout title="Dicono di noi - AFK Progetto Giovani">
     <main>
-        <PageTitle title="DICONO DI NOI" img="/afkprogettogiovani/chi-siamo.jpg" />
+        <PageTitle
+            title="DICONO DI NOI"
+            img="/afkprogettogiovani/chi-siamo.jpg"
+        />
         <section>
             <h2>COSA NE PENSANO DEL NOSTRO PROGETTO?</h2>
-            <CitationsGrid>
-                <CitationCard title="Milano Lorenteggio" text="Doppio successo, tutto sold out per il musical “A Million Dreams”..." />
-                <CitationCard title="Fondo DMD" text="Orgogliosi di essere stati i destinatari della solidarietà di AFK..." />
-                <CitationCard title="Sempione News" text="I giovani fanno sognare il nuovo Teatro De Silva..." />
-                <CitationCard title="Dal pubblico" text="COMPLIMENTI! COMPLIMENTI e ancora COMPLIMENTI..." />
+            <CitationsGrid columns="3">
+                <TestimonialsCard
+                    img={miLorenteggioImage}
+                    alt="MI Lorenteggio"
+                    url="#"
+                    title="T-OFF, debutto sold out con AFK Progetto Giovani"
+                    text="Rho, 5 dicembre 2022 Doppio successo, il pomeriggio e la sera di sabato 3 dicembre per il primo evento T-OFF. AFK Progetto Giovani ha trasformato il.."
+                />
+                <TestimonialsCard
+                    img={dmdImage}
+                    alt="DMD"
+                    url="#"
+                    title="Un Ringraziamento ad AFK"
+                    text="Carissimi, volevamo innanzitutto ringraziarvi per aver dedicato alla nostra Associazione questa bellissima serata..."
+                />
+                <TestimonialsCard
+                    img={sempioneNewsImage}
+                    alt="Sempione News"
+                    url="#"
+                    title="I giovani fanno sognare il nuovo Teatro De Silva"
+                    text="Si sono esibiti nel musical “A Million Dreams” sul palco del Teatro Roberto De Silva di Rho i giovani di AFK.."
+                />
             </CitationsGrid>
         </section>
     </main>

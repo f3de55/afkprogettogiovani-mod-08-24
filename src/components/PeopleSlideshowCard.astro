@@ -1,0 +1,86 @@
+---
+const { people } = Astro.props;
+
+import { Image } from 'astro:assets';
+---
+
+<div class="people-slideshow-card">
+    <Image id="person-image" src={people[0].img} alt={people[0].alt} />
+    <span id="previous"><i class="fa-solid fa-circle-chevron-left"></i></span>
+    <span id="next"><i class="fa-solid fa-circle-chevron-right"></i></span>
+    <div class="info">
+        <h3 id="person-name">{people[0].name}</h3>
+        <p id="person-role" class="italic">{people[0].role}</p>
+    </div>
+</div>
+
+<style>
+    .people-slideshow-card {
+        position: relative;
+        max-width: 45rem;
+    }
+    #previous, #next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+    #previous {
+        left: 0.875rem;
+    }
+    #next {
+        right: 0.875rem;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-s);
+        position: absolute;
+        width: calc(100% - var(--space-m) * 2);
+        bottom: 0;
+        padding: var(--space-s) var(--space-m);
+        border-radius: var(--border-radius);
+        background: var(--pink-3);
+    }
+    h3 {
+        text-align: left;
+    }
+
+    @media screen and (min-width: 1000px) {
+        #previous, #next {
+            font-size: 2.5rem;
+        }
+        #previous {
+            left: 1rem;
+        }
+        #next {
+            right: 1rem;
+        }
+
+        .info {
+            gap: var(--border-radius);
+        }
+    }
+</style>
+
+<script define:vars={{ people }}>
+    let currentIndex = 0;
+
+    function nextSlideshowImage(n = 1) {
+        currentIndex = (currentIndex + n + people.length) % people.length;
+
+        const personImage = document.getElementById('person-image');
+        const personName = document.getElementById('person-name');
+        const personRole = document.getElementById('person-role');
+
+        personImage.src = people[currentIndex].img.src;
+        personImage.alt = people[currentIndex].alt;
+        personName.textContent = people[currentIndex].name;
+        personRole.textContent = people[currentIndex].role;
+    }
+
+    document.getElementById('previous').addEventListener('click', () => nextSlideshowImage(-1));
+    document.getElementById('next').addEventListener('click', () => nextSlideshowImage());
+</script>

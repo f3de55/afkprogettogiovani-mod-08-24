@@ -1,0 +1,46 @@
+---
+const { img, alt, url, title, text } = Astro.props;
+
+import ButtonLink from './ButtonLink.astro';
+
+import { Image } from 'astro:assets';
+---
+
+<div class="testimonials-card">
+    <div class="logo">
+        <Image src={img} alt={alt} />
+    </div>
+    <h5>{title}</h5>
+    <p>{text}</p>
+    <ButtonLink url={url} text="Leggi tutto" icon="fa-solid fa-book" />
+</div>
+
+<style>
+    .testimonials-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-s);
+        padding: var(--space-m);
+        border-radius: var(--border-radius);
+        background: var(--white-3);
+    }
+    .logo {
+        width: auto;
+        height: 2.6875rem;
+    }
+    img {
+        width: auto;
+        max-height: 100%;
+    }
+    h5 {
+        align-self: flex-start;
+        color: #000000;
+    }
+    
+    @media screen and (min-width: 1000px) {
+        .testimonials-card {
+            padding: var(--space-s);
+        }
+    }
+</style>
