@@ -1,0 +1,64 @@
+---
+import { Image } from 'astro:assets';
+import chiSiamoImage from '../assets/chi-siamo.jpg';
+---
+
+<aside id="lightbox">
+    <span id="lightbox-close"><i class="fa-solid fa-xmark"></i></span>
+    <Image id="lightbox-image" src={chiSiamoImage} alt="Una foto di noi" />
+</aside>
+
+<style>
+    aside {
+        display: none;
+        position: fixed;
+        z-index: 4;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.8);
+    }
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    span {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        color: #ffffff;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    @media screen and (min-width: 1000px) {
+        img {
+            width: auto;
+            max-height: 90vh;
+        }
+        span {
+            right: 2rem;
+            font-size: 3.125rem;
+        }
+    }
+</style>
+
+<script>
+    function toggleLightbox(lightbox) {
+        lightbox.style.display = (lightbox.style.display === 'block') ? 'none' : 'block';
+    }
+
+    let lightbox = document.getElementById('lightbox');
+    let lightboxImage = document.getElementById('lightbox-image');
+    document.getElementById('lightbox-close').addEventListener('click', () => toggleLightbox(lightbox));
+    lightbox.addEventListener('onfocusout', () => toggleLightbox(lightbox));
+
+    document.querySelectorAll('img:not(#logo)').forEach(img => img.addEventListener('click', () => {
+        lightboxImage.src = img.src;
+        lightboxImage.alt = img.alt;
+        toggleLightbox(lightbox);
+    }));
+</script>

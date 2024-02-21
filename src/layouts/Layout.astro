@@ -8,6 +8,7 @@ import '@fontsource/lato/400-italic.css';
 
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Lightbox from '../components/Lightbox.astro';
 ---
 
 <!doctype html>
@@ -23,6 +24,7 @@ import Footer from '../components/Footer.astro';
     </head>
     <body>
         <Header />
+        <Lightbox />
         <slot />
         <Footer />
     </body>
@@ -176,9 +178,3 @@ import Footer from '../components/Footer.astro';
         }
     }
 </style>
-
-<script>
-    document.querySelectorAll('img').forEach(img => {
-        img.addEventListener('click', () => alert('here'));
-    });
-</script>
