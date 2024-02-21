@@ -12,6 +12,6 @@
   "dependencies": {
     "@fontsource/lato": "^5.0.18",
     "@fontsource/russo-one": "^5.0.18",
-    "astro": "^4.1.0"
+    "astro": "^4.4.1"
   }
 }

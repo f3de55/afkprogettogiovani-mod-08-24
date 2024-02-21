@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import PageTitle from "../components/PageTitle.astro";
 import TestimonialsCard from "../components/TestimonialsCard.astro";
-import CitationsGrid from "../components/CitationsGrid.astro";
+import Grid from "../components/Grid.astro";
 
 import miLorenteggioImage from "../assets/testimonials/mi-lorenteggio.jpg";
 import dmdImage from "../assets/testimonials/dmd.png";
@@ -17,7 +17,7 @@ import sempioneNewsImage from "../assets/testimonials/sempione-news.png";
         />
         <section>
             <h2>COSA NE PENSANO DEL NOSTRO PROGETTO?</h2>
-            <CitationsGrid columns="3">
+            <Grid>
                 <TestimonialsCard
                     img={miLorenteggioImage}
                     alt="MI Lorenteggio"
@@ -39,7 +39,7 @@ import sempioneNewsImage from "../assets/testimonials/sempione-news.png";
                     title="I giovani fanno sognare il nuovo Teatro De Silva"
                     text="Si sono esibiti nel musical “A Million Dreams” sul palco del Teatro Roberto De Silva di Rho i giovani di AFK.."
                 />
-            </CitationsGrid>
+            </Grid>
         </section>
     </main>
 </Layout>

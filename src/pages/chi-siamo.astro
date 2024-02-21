@@ -5,7 +5,7 @@ import BulletPoint from '../components/BulletPoint.astro';
 import TextImage from '../components/TextImage.astro';
 import FeaturedBulletPoints from '../components/FeaturedBulletPoints.astro';
 import TimelineItem from '../components/TimelineItem.astro';
-import TimelineGrid from '../components/TimelineGrid.astro';
+import Grid from '../components/Grid.astro';
 import PeopleSlideshowCard from '../components/PeopleSlideshowCard.astro';
 
 import { Image } from 'astro:assets';
@@ -62,12 +62,12 @@ const teamComunicazione = [
         </section>
         <section class="section-light">
             <h2>LA NOSTRA STORIA</h2>
-            <TimelineGrid>
+            <Grid>
                 <TimelineItem title="2020" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
                 <TimelineItem title="2021" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
                 <TimelineItem title="2022" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
                 <TimelineItem title="2023" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
-            </TimelineGrid>
+            </Grid>
             <Image src={laNostraStoriaImage} alt="Una foto di noi" />
         </section>
         <section class="section-light">

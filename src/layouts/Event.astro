@@ -1,0 +1,33 @@
+---
+const { frontmatter } = Astro.props;
+
+import Layout from '../layouts/Layout.astro';
+import PageTitle from '../components/PageTitle.astro';
+import Grid from '../components/Grid.astro';
+---
+
+<Layout title=`${frontmatter.title} - AFK Progetto Giovani`>
+    <main>
+        <PageTitle title="FOTO EVENTI" img="/afkprogettogiovani/chi-siamo.jpg" />
+        <section class="event-page-grid">
+                <slot />
+        </section>
+    </main>
+</Layout>
+
+<style is:global>
+    .event-page-grid > p {
+        display: grid;
+        gap: var(--space-m);
+    }
+
+    @media screen and (min-width: 1000px) {
+        .event-page-grid > p {
+            grid-template-columns: 1fr 1fr;
+        }
+        .event-page-grid > p img {
+            height: 30rem;
+            object-fit: cover;
+        }
+    }
+</style>
