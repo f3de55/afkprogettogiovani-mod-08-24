@@ -4,15 +4,15 @@ const { people } = Astro.props;
 import { Image } from 'astro:assets';
 ---
 
-<div class="people-slideshow-card">
-    <Image id="person-image" src={people[0].img} alt={people[0].alt} />
+<people-slideshow-card class="people-slideshow-card" data-people={people}>
+    <Image id="person-image" src={JSON.parse(people)[0].img} alt={JSON.parse(people)[0].alt} />
     <span id="previous"><i class="fa-solid fa-circle-chevron-left"></i></span>
     <span id="next"><i class="fa-solid fa-circle-chevron-right"></i></span>
     <div class="info">
-        <h3 id="person-name">{people[0].name}</h3>
-        <p id="person-role" class="italic">{people[0].role}</p>
+        <h3 id="person-name">{JSON.parse(people)[0].name}</h3>
+        <p id="person-role" class="italic">{JSON.parse(people)[0].role}</p>
     </div>
-</div>
+</people-slideshow-card>
 
 <style>
     .people-slideshow-card {
@@ -65,22 +65,32 @@ import { Image } from 'astro:assets';
     }
 </style>
 
-<script define:vars={{ people }}>
-    let currentIndex = 0;
+<script>
+    class PeopleSlideshowCard extends HTMLElement {
+        constructor() {
+            super();
 
-    function nextSlideshowImage(n = 1) {
-        currentIndex = (currentIndex + n + people.length) % people.length;
+            const people = JSON.parse(this.dataset.people);
 
-        const personImage = document.getElementById('person-image');
-        const personName = document.getElementById('person-name');
-        const personRole = document.getElementById('person-role');
+            let currentIndex = 0;
 
-        personImage.src = people[currentIndex].img.src;
-        personImage.alt = people[currentIndex].alt;
-        personName.textContent = people[currentIndex].name;
-        personRole.textContent = people[currentIndex].role;
+            const personImage = this.querySelector('#person-image');
+            const personName = this.querySelector('#person-name');
+            const personRole = this.querySelector('#person-role');
+
+            this.querySelector('#previous').addEventListener('click', () => nextSlideshowImage(-1));
+            this.querySelector('#next').addEventListener('click', () => nextSlideshowImage());
+
+            function nextSlideshowImage(n = 1) {
+                currentIndex = (currentIndex + n + people.length) % people.length;
+
+                personImage.src = people[currentIndex].img.src;
+                personImage.alt = people[currentIndex].alt;
+                personName.textContent = people[currentIndex].name;
+                personRole.textContent = people[currentIndex].role;
+            }
+        }
     }
 
-    document.getElementById('previous').addEventListener('click', () => nextSlideshowImage(-1));
-    document.getElementById('next').addEventListener('click', () => nextSlideshowImage());
+    customElements.define('people-slideshow-card', PeopleSlideshowCard);
 </script>
