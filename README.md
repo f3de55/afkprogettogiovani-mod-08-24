@@ -3,6 +3,7 @@
 
 ## TODO
 TODO:
+- Inserire link e piu cose in dicono di noi
 - Aggiungere link PayPal
 - Aggiungere statuto AFK
 - Rendere il link nella nav della pagina attuale rosa
