@@ -10,13 +10,15 @@ import Grid from '../components/Grid.astro';
     <main>
         <PageTitle title="FOTO EVENTI" img="/afkprogettogiovani/chi-siamo.jpg" />
         <section class="event-page-grid">
+                <h2>{frontmatter.title.toUpperCase()}</h2>
+                <p>{frontmatter.text}</p>
                 <slot />
         </section>
     </main>
 </Layout>
 
 <style is:global>
-    .event-page-grid > p {
+    .event-page-grid > p:not(:first-of-type) {
         display: grid;
         gap: var(--space-m);
     }
