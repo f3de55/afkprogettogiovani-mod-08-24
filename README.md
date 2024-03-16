@@ -3,6 +3,8 @@
 
 ## TODO
 TODO:
+- Rendere il link nella nav della pagina attuale rosa
+- Cambiare immagini per ogni page <Title /> (le scelgo io)
 - Rendere video nell'hero più performante: https://blog.logrocket.com/optimizing-video-backgrounds-css-javascript/#making-video-backgrounds-performant
 - Ottimizzare tutti i video (anche quello di amici sostenitori, riducendolo, lazy loading, trasformandolo in webm...)
 - Far funzionare autoplay su iOS
