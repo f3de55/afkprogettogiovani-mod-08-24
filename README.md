@@ -3,6 +3,7 @@
 
 ## TODO
 TODO:
+- Aggiungere link PayPal
 - Aggiungere statuto AFK
 - Rendere il link nella nav della pagina attuale rosa
 - Cambiare immagini per ogni page <Title /> (le scelgo io)
