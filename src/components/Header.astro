@@ -1,6 +1,8 @@
 ---
 import { Image } from 'astro:assets';
 import logoImage from '../assets/afk-logo-bianco-trasparente.png';
+
+const currentPath = new URL(Astro.request.url).pathname.slice(1);
 ---
 
 <header>
@@ -20,12 +22,12 @@ import logoImage from '../assets/afk-logo-bianco-trasparente.png';
     <!-- Nav items -->
     <nav>
         <ul>
-            <li><a class="bold" href="/afkprogettogiovani">Home</a></li>
-            <li><a class="bold" href="/afkprogettogiovani/chi-siamo">Chi siamo</a></li>
-            <li><a class="bold" href="/afkprogettogiovani/eventi">Eventi</a></li>
-            <li><a class="bold" href="/afkprogettogiovani/sostenitori">Sostenitori</a></li>
-            <li><a class="bold" href="/afkprogettogiovani/dicono-di-noi">Dicono di noi</a></li>
-            <li><a class="bold" href="/afkprogettogiovani/contatti">Contatti</a></li>
+            <li class={currentPath === 'afkprogettogiovani/' ? 'active' : ''}><a class="bold" href="/afkprogettogiovani">Home</a></li>
+            <li class={currentPath === 'afkprogettogiovani/chi-siamo' ? 'active' : ''}><a class="bold" href="/afkprogettogiovani/chi-siamo">Chi siamo</a></li>
+            <li class={currentPath === 'afkprogettogiovani/eventi' ? 'active' : ''}><a class="bold" href="/afkprogettogiovani/eventi">Eventi</a></li>
+            <li class={currentPath === 'afkprogettogiovani/sostenitori' ? 'active' : ''}><a class="bold" href="/afkprogettogiovani/sostenitori">Sostenitori</a></li>
+            <li class={currentPath === 'afkprogettogiovani/dicono-di-noi' ? 'active' : ''}><a class="bold" href="/afkprogettogiovani/dicono-di-noi">Dicono di noi</a></li>
+            <li class={currentPath === 'afkprogettogiovani/contatti' ? 'active' : ''}><a class="bold" href="/afkprogettogiovani/contatti">Contatti</a></li>
         </ul>
     </nav>
 </header>
@@ -126,7 +128,7 @@ import logoImage from '../assets/afk-logo-bianco-trasparente.png';
             gap: var(--space-s);
             padding: var(--space-m) var(--space-m);
         }
-        ul li a:hover {
+        .active a, ul li a:hover {
             color: var(--pink-5);
         }
     }
