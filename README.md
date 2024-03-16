@@ -3,6 +3,7 @@
 
 ## TODO
 TODO:
+- Aggiungere statuto AFK
 - Rendere il link nella nav della pagina attuale rosa
 - Cambiare immagini per ogni page <Title /> (le scelgo io)
 - Rendere video nell'hero più performante: https://blog.logrocket.com/optimizing-video-backgrounds-css-javascript/#making-video-backgrounds-performant
