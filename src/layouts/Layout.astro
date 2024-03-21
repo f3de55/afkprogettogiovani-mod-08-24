@@ -82,11 +82,18 @@ import Lightbox from '../components/Lightbox.astro';
 
     img, video {
         max-width: 100%;
+        width: auto;
         height: auto;
         border-radius: var(--border-radius);
     }
     img {
         max-width: min(100%, 45rem);
+    }
+    iframe {
+        aspect-ratio: 16 / 9;
+        max-width: 100%;
+        height: auto;
+        border-radius: var(--border-radius);
     }
 
     /* Typography */

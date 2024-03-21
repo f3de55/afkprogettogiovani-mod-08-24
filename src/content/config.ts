@@ -7,6 +7,7 @@ const eventsCollection = defineCollection({
         title: z.string(),
         text: z.string(),
         date: z.date(),
+        place: z.string(),
         image: z.string()
     })
 });

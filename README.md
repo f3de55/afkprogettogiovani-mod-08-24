@@ -3,15 +3,16 @@
 
 ## TODO
 TODO:
-- Inserire link e piu cose in dicono di noi
+- Aggiungere piu roba in dicono di noi
 - Aggiungere link PayPal
 - Aggiungere statuto AFK
-- Cambiare immagini per ogni page <Title /> (le scelgo io)
 - Rendere video nell'hero più performante: https://blog.logrocket.com/optimizing-video-backgrounds-css-javascript/#making-video-backgrounds-performant
-- Ottimizzare tutti i video (anche quello di amici sostenitori, riducendolo, lazy loading, trasformandolo in webm...)
 - Far funzionare autoplay su iOS
 
 DONE:
+- Ottimizzare tutti i video (anche quello di amici sostenitori, riducendolo, lazy loading, trasformandolo in webm...)
+- Aggiungere immagini eventi
+- Cambiare immagini per ogni page <Title /> (le scelgo io)
 - Rendere il link nella nav della pagina attuale rosa
 - Creare delle variabili CSS per tutti i padding, font size, color ecc.
 - Impostare bene la tipografia nel layout, regolare line-height, margin, padding ecc., ci dovrà (purtroppo) molto probabilmente essere h1 poi h2 poi h3 ecc.

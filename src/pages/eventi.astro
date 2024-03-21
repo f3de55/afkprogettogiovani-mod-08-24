@@ -8,17 +8,17 @@ import { getCollection } from "astro:content";
 
 import chiSiamoImage from "../assets/chi-siamo.jpg";
 
-const events = await getCollection("events");
+const events = (await getCollection("events")).sort((a, b) => Number(b.data.date) - Number(a.data.date));
 ---
 
 <Layout title="Eventi - AFK Progetto Giovani">
     <main>
-        <PageTitle title="EVENTI" img="/afkprogettogiovani/chi-siamo.jpg" />
+        <PageTitle title="EVENTI" img="/afkprogettogiovani/pagetitles/eventi.webp" />
         <section>
             <h2>PROSSIMI EVENTI</h2>
             <EventCard
                 title="Il sentiero d'argento"
-                text="Un giovane becchino, un filosofo dimenticato e un trattato proibito: questa storia racconta quanto può essere potente un'idea, anche quando il mondo la ignora"
+                text="Un giovane becchino, un filosofo dimenticato e un trattato proibito: questa storia racconta quanto può essere potente un'idea, anche quando il mondo la ignora."
                 url="https://wa.me/+393513190008"
                 date="Sabato 8 giu 2024"
                 place="Auditorium Padre Reina Rho"
@@ -34,8 +34,9 @@ const events = await getCollection("events");
                         <PastEventCard
                             url={`/afkprogettogiovani/events/${event.slug}`}
                             title={event.data.title}
-                            text={event.data.text}
+                            text={event.data.text.length > 75 ? event.data.text.slice(0, 75) + "..." : event.data.text}
                             date={event.data.date.toLocaleDateString("it-it", {day: "numeric", month: "long", year: "numeric"})}
+                            place={event.data.place}
                             img={event.data.image}
                         />
                     ))

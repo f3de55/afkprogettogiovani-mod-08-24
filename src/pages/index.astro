@@ -1,17 +1,17 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro';
-import ButtonLink from '../components/ButtonLink.astro';
-import EventCard from '../components/EventCard.astro';
-import CitationCard from '../components/CitationCard.astro';
-import Grid from '../components/Grid.astro';
-import ContactInfo from '../components/ContactInfo.astro';
-import TextImage from '../components/TextImage.astro';
-import TextVideo from '../components/TextVideo.astro';
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import ButtonLink from "../components/ButtonLink.astro";
+import EventCard from "../components/EventCard.astro";
+import CitationCard from "../components/CitationCard.astro";
+import Grid from "../components/Grid.astro";
+import ContactInfo from "../components/ContactInfo.astro";
+import TextImage from "../components/TextImage.astro";
+import TextVideo from "../components/TextVideo.astro";
 
-import { Image } from 'astro:assets';
-import chiSiamoImage from '../assets/chi-siamo.jpg';
-import eventipassatiImage from '../assets/eventi-passati.png';
+import { Image } from "astro:assets";
+import chiSiamoImage from "../assets/chi-siamo.jpg";
+import eventipassatiImage from "../assets/eventi-passati.png";
 ---
 
 <Layout title="AFK Progetto Giovani">
@@ -20,33 +20,82 @@ import eventipassatiImage from '../assets/eventi-passati.png';
         <section class="section-light">
             <TextImage img={chiSiamoImage} alt="Una foto di noi">
                 <h2>CHI SIAMO?</h2>
-                <p>Siamo un gruppo di giovani, con la passione per ogni forma d’arte. Insieme impariamo a valorizzare i nostri talenti. Dal 2022 grazie a chi ha creduto in noi.</p>            
+                <p>
+                    Siamo un gruppo di giovani pieni di entusiasmo, adoriamo il
+                    teatro e ogni forma d’arte, e vogliamo provare a cambiare il
+                    mondo seguendo le nostre passioni e coltivando la nostra
+                    unicità. Il motto che ci guida è ‘Lontano dagli schermi,
+                    fuori dagli schemi!’, e anche se ognuno di noi studia o
+                    lavora, ci incontriamo ogni settimana per realizzare nuovi
+                    progetti, e per trasformare i nostri sogni in realtà. Il
+                    musical è il genere a noi più congeniale, ma siamo aperti ad
+                    ogni tipo di contaminazione culturale. Oltre ad occuparci
+                    personalmente della scrittura e della messa in scena dei
+                    nostri spettacoli (sul palco, nel backstage e nella parte
+                    tecnica), abbiamo come obiettivo principale la solidarietà:
+                    l’incasso di ogni serata viene infatti devoluto in
+                    beneficenza a diverse associazioni del territorio.
+                </p>
             </TextImage>
         </section>
         <section>
             <h2>PROSSIMI EVENTI</h2>
-            <EventCard title="Il sentiero d'argento" text="Un giovane becchino, un filosofo dimenticato e un trattato proibito: questa storia racconta quanto può essere potente un'idea, anche quando il mondo la ignora" url="https://wa.me/+393513190008" date="Sabato 8 giu 2024" place="Auditorium Padre Reina Rho" img={chiSiamoImage} alt="Una foto di noi" />
+            <EventCard
+                title="Il sentiero d'argento"
+                text="Un giovane becchino, un filosofo dimenticato e un trattato proibito: questa storia racconta quanto può essere potente un'idea, anche quando il mondo la ignora."
+                url="https://wa.me/+393513190008"
+                date="Sabato 8 giu 2024"
+                place="Auditorium Padre Reina Rho"
+                img={chiSiamoImage}
+                alt="Una foto di noi"
+            />
         </section>
         <section>
             <h2>EVENTI PASSATI</h2>
             <Image src={eventipassatiImage} alt="Una foto di noi" />
-            <ButtonLink url="/afkprogettogiovani/eventi#eventi-passati" text="Guarda tutto" />
+            <ButtonLink
+                url="/afkprogettogiovani/eventi#eventi-passati"
+                text="Guarda tutto"
+            />
         </section>
         <section class="section-light">
             <TextVideo video="/afkprogettogiovani/amici-sostenitori.mp4">
                 <h2>AMICI SOSTENITORI</h2>
-                <p>I nostri amici sostenitori ci permettono di continuare a realizzare i nostri sogni!</p>
+                <p>
+                    I nostri amici sostenitori sono importantissimi, e
+                    costituiscono il cuore pulsante di AFK. E’ solo grazie alla
+                    loro generosità e alle loro donazioni, infatti, se riusciamo
+                    a portare in scena i nostri spettacoli, ad acquistare il
+                    materiale che ci serve, e a seguire corsi, workshop e master
+                    per studiare e cercare di migliorarci sempre di più.
+                </p>
+                <iframe slot="video" width="1250" height="703" src="https://www.youtube.com/embed/1six50_BW_A" title="I nostri amici sostenitori - Dicembre 2022" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </TextVideo>
         </section>
         <section>
             <h2>DICONO DI NOI</h2>
             <Grid>
-                <CitationCard title="Milano Lorenteggio" text="Doppio successo, tutto sold out per il musical “A Million Dreams”..." />
-                <CitationCard title="Fondo DMD" text="Orgogliosi di essere stati i destinatari della solidarietà di AFK..." />
-                <CitationCard title="Sempione News" text="I giovani fanno sognare il nuovo Teatro De Silva..." />
-                <CitationCard title="Dal pubblico" text="COMPLIMENTI! COMPLIMENTI e ancora COMPLIMENTI..." />
+                <CitationCard
+                    title="Milano Lorenteggio"
+                    text="Doppio successo, tutto sold out per il musical “A Million Dreams”..."
+                />
+                <CitationCard
+                    title="Fondo DMD"
+                    text="Orgogliosi di essere stati i destinatari della solidarietà di AFK..."
+                />
+                <CitationCard
+                    title="Sempione News"
+                    text="I giovani fanno sognare il nuovo Teatro De Silva..."
+                />
+                <CitationCard
+                    title="Dal pubblico"
+                    text="COMPLIMENTI! COMPLIMENTI e ancora COMPLIMENTI..."
+                />
             </Grid>
-            <ButtonLink url="/afkprogettogiovani/dicono-di-noi" text="Guarda tutti" />
+            <ButtonLink
+                url="/afkprogettogiovani/dicono-di-noi"
+                text="Guarda tutti"
+            />
         </section>
         <section class="section-light">
             <ContactInfo />

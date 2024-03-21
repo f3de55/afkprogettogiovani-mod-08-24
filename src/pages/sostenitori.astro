@@ -1,29 +1,43 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import PageTitle from '../components/PageTitle.astro';
-import BulletPoint from '../components/BulletPoint.astro';
-import TextImage from '../components/TextImage.astro';
-import FeaturedBulletPoints from '../components/FeaturedBulletPoints.astro';
-import TextVideo from '../components/TextVideo.astro';
-
-import chiSiamoImage from '../assets/chi-siamo.jpg';
+import Layout from "../layouts/Layout.astro";
+import PageTitle from "../components/PageTitle.astro";
+import BulletPoint from "../components/BulletPoint.astro";
+import FeaturedBulletPoints from "../components/FeaturedBulletPoints.astro";
+import TextVideo from "../components/TextVideo.astro";
 ---
 
 <Layout title="Sostenitori - AFK Progetto Giovani">
     <main>
-        <PageTitle title="SOSTENITORI" img="/afkprogettogiovani/chi-siamo.jpg" />
+        <PageTitle
+            title="SOSTENITORI"
+            img="/afkprogettogiovani/pagetitles/sostenitori.webp"
+        />
         <section class="section-light">
             <TextVideo video="/afkprogettogiovani/amici-sostenitori.mp4">
                 <h2>AMICI SOSTENITORI</h2>
-                <p>I nostri amici sostenitori sono il cuore pulsante dietro ogni spettacolo. Ogni donazione spontanea ci avvicina di più a portare gioia e ispirazione.</p>
+                <p>
+                    I nostri amici sostenitori sono importantissimi, e
+                    costituiscono il cuore pulsante di AFK. E’ solo grazie alla
+                    loro generosità e alle loro donazioni, infatti, se riusciamo
+                    a portare in scena i nostri spettacoli, ad acquistare il
+                    materiale che ci serve, e a seguire corsi, workshop e master
+                    per studiare e cercare di migliorarci sempre di più.
+                </p>
+                <iframe slot="video" width="1250" height="703" src="https://www.youtube.com/embed/1six50_BW_A" title="I nostri amici sostenitori - Dicembre 2022" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </TextVideo>
         </section>
         <section>
             <h2>VUOI SUPPORTARCI ANCHE TU?</h2>
             <FeaturedBulletPoints>
-                <BulletPoint icon="fa-solid fa-credit-card" text="Attraverso una donazione, IBAN: IT47W062300957200005712447" />
-                <BulletPoint icon="fa-brands fa-cc-paypal" text="Attraverso PayPal, da qui" /> 
-            </FeaturedBulletPoints>  
+                <BulletPoint
+                    icon="fa-solid fa-credit-card"
+                    text="Attraverso una donazione, IBAN: IT47W062300957200005712447"
+                />
+                <BulletPoint
+                    icon="fa-brands fa-cc-paypal"
+                    text="Attraverso PayPal, da qui"
+                />
+            </FeaturedBulletPoints>
         </section>
     </main>
 </Layout>

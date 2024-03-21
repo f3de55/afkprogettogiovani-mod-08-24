@@ -1,13 +1,13 @@
 ---
 import ButtonLink from './ButtonLink.astro';
 
-const { url, title, text, date, img } = Astro.props
+const { url, title, text, date, place, img } = Astro.props
 ---
 
 <div class="card">
     <div class="info">
         <h4>{title}</h4>
-        <p>{date}</p>
+        <p>{date} - {place}</p>
         <p>{text}</p>
         <ButtonLink url={url} text="Guarda le foto" />
     </div>

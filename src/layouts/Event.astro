@@ -3,7 +3,6 @@ const { frontmatter } = Astro.props;
 
 import Layout from '../layouts/Layout.astro';
 import PageTitle from '../components/PageTitle.astro';
-import Grid from '../components/Grid.astro';
 ---
 
 <Layout title=`${frontmatter.title} - AFK Progetto Giovani`>
@@ -11,6 +10,7 @@ import Grid from '../components/Grid.astro';
         <PageTitle title="FOTO EVENTI" img="/afkprogettogiovani/chi-siamo.jpg" />
         <section class="event-page-grid">
                 <h2>{frontmatter.title.toUpperCase()}</h2>
+                <p>{frontmatter.date.toLocaleDateString("it-it", {day: "numeric", month: "long", year: "numeric"})} - {frontmatter.place}</p>
                 <p>{frontmatter.text}</p>
                 <slot />
         </section>
@@ -18,7 +18,13 @@ import Grid from '../components/Grid.astro';
 </Layout>
 
 <style is:global>
-    .event-page-grid > p:not(:first-of-type) {
+    .event-page-grid img {
+        max-width: 100%;
+    }
+    .event-page-grid > p:nth-child(3) {
+        max-width: 50rem;
+    }
+    .event-page-grid > p:nth-child(4) {
         display: grid;
         gap: var(--space-m);
     }

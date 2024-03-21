@@ -1,16 +1,16 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import PageTitle from '../components/PageTitle.astro';
-import BulletPoint from '../components/BulletPoint.astro';
-import TextImage from '../components/TextImage.astro';
-import FeaturedBulletPoints from '../components/FeaturedBulletPoints.astro';
-import TimelineItem from '../components/TimelineItem.astro';
-import Grid from '../components/Grid.astro';
-import PeopleSlideshowCard from '../components/PeopleSlideshowCard.astro';
+import Layout from "../layouts/Layout.astro";
+import PageTitle from "../components/PageTitle.astro";
+import BulletPoint from "../components/BulletPoint.astro";
+import TextImage from "../components/TextImage.astro";
+import FeaturedBulletPoints from "../components/FeaturedBulletPoints.astro";
+import TimelineItem from "../components/TimelineItem.astro";
+import Grid from "../components/Grid.astro";
+import PeopleSlideshowCard from "../components/PeopleSlideshowCard.astro";
 
-import { Image } from 'astro:assets';
-import chiSiamoImage from '../assets/chi-siamo.jpg';
-import laNostraStoriaImage from '../assets/la-nostra-storia.jpg';
+import { Image } from "astro:assets";
+import chiSiamoImage from "../assets/chi-siamo.jpg";
+import laNostraStoriaImage from "../assets/la-nostra-storia.jpg";
 
 // People slideshow cards
 // import salvatoreTranchinaImage from '../assets/people/SalvatoreTranchina.png';
@@ -33,19 +33,43 @@ import laNostraStoriaImage from '../assets/la-nostra-storia.jpg';
 
 <Layout title="Chi siamo - AFK Progetto Giovani">
     <main>
-        <PageTitle title="CHI SIAMO?" img="/afkprogettogiovani/chi-siamo.jpg" />
+        <PageTitle title="CHI SIAMO?" img="/afkprogettogiovani/pagetitles/chi-siamo.webp" />
         <section class="section-light">
             <TextImage img={chiSiamoImage} alt="Una foto di noi">
                 <h2>LONTANO DAGLI SCHERMI, FUORI DAGLI SCHEMI</h2>
-                <p>Siamo un gruppo composto da persone di diverse età con l'obiettivo di stare lontano dagli schermi ma fuori dagli schemi. Insieme impariamo a credere in noi stessi, attraverso nuove sfide e</p>        
+                <p>
+                    Siamo un gruppo di giovani pieni di entusiasmo, adoriamo il
+                    teatro e ogni forma d’arte, e vogliamo provare a cambiare il
+                    mondo seguendo le nostre passioni e coltivando la nostra
+                    unicità. Il motto che ci guida è ‘Lontano dagli schermi,
+                    fuori dagli schemi!’, e anche se ognuno di noi studia o
+                    lavora, ci incontriamo ogni settimana per realizzare nuovi
+                    progetti, e per trasformare i nostri sogni in realtà. Il
+                    musical è il genere a noi più congeniale, ma siamo aperti ad
+                    ogni tipo di contaminazione culturale. Oltre ad occuparci
+                    personalmente della scrittura e della messa in scena dei
+                    nostri spettacoli (sul palco, nel backstage e nella parte
+                    tecnica), abbiamo come obiettivo principale la solidarietà:
+                    l’incasso di ogni serata viene infatti devoluto in
+                    beneficenza a diverse associazioni del territorio.
+                </p>
             </TextImage>
         </section>
         <section>
             <h2>I NOSTRI OBIETTIVI</h2>
             <FeaturedBulletPoints>
-                <BulletPoint icon="fa-solid fa-face-laugh-wink" text="Sostenere le nuove generazioni creando momenti di unione" />
-                <BulletPoint icon="fa-solid fa-masks-theater" text="Promuovere l'arte e la cultura" />
-                <BulletPoint icon="fa-solid fa-heart" text="Devolvere il ricavato degli spettacoli in beneficenza" />
+                <BulletPoint
+                    icon="fa-solid fa-face-laugh-wink"
+                    text="Sostenere le nuove generazioni creando momenti di unione"
+                />
+                <BulletPoint
+                    icon="fa-solid fa-masks-theater"
+                    text="Promuovere l'arte e la cultura"
+                />
+                <BulletPoint
+                    icon="fa-solid fa-heart"
+                    text="Devolvere il ricavato degli spettacoli in beneficenza"
+                />
             </FeaturedBulletPoints>
         </section>
         <!-- <section class="section-light">
@@ -63,16 +87,28 @@ import laNostraStoriaImage from '../assets/la-nostra-storia.jpg';
         <section class="section-light">
             <h2>LA NOSTRA STORIA</h2>
             <Grid>
-                <TimelineItem title="2020" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
-                <TimelineItem title="2021" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
-                <TimelineItem title="2022" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
-                <TimelineItem title="2023" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut aliquam dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+                <TimelineItem
+                    title="2021"
+                    text="L’anno in cui è cominciato tutto. Accomunati dalla voglia di riappropriarci della nostra vita e di costruire qualcosa di bello e di importante dopo il Covid, ci siamo incontrati, abbiamo iniziato a fare amicizia e a scoprire le passioni e le affinità che ci legavano, e a novembre ci siamo esibiti nel nostro primo mini musical."
+                />
+                <TimelineItem
+                    title="2022"
+                    text="L’anno della nascita ufficiale di AFK Progetto Giovani. A gennaio abbiamo fondato la nostra associazione culturale no-profit, e pian piano il nostro gruppo si è allargato, abbiamo iniziato a farci conoscere, e siamo diventati sempre più numerosi ed affiatati. A maggio abbiamo debuttato con il nostro primo musical, ‘A Million Dreams’, che ha avuto un ottimo successo di pubblico, a cui sono seguite diverse repliche."
+                />
+                <TimelineItem
+                    title="2023"
+                    text="Il debutto di AFK in Sicilia. A marzo abbiamo realizzato uno spettacolo sperimentale, frutto della contaminazione tra poesia, teatro e musica, intitolato ‘Frammenti d’Amore e di Follia’, che ci ha dato molte soddisfazioni. Ma l’evento più emozionante del 2023 è stato senz’altro portare il nostro musical ‘A Million Dreams’ sul palco del prestigioso Teatro Orione di Palermo. E’ stata anche la nostra prima trasferta insieme, e ci ha resi ancora più uniti e più consapevoli di quanto sia importante quello che facciamo."
+                />
+                <TimelineItem
+                    title="2024"
+                    text="Work in progress: l’immenso piacere di portare in scena il primo musical pensato, scritto e realizzato completamente da noi. Stiamo lavorando a ‘Il sentiero d’argento’, un nostro testo che debutterà per la prima volta il 9 giugno, e che racconta la storia di quanto possa essere potente un’idea, anche quando la società cerca in ogni modo di ostacolare chi darebbe la vita per difenderla."
+                />
             </Grid>
             <Image src={laNostraStoriaImage} alt="Una foto di noi" />
         </section>
         <section class="section-light">
             <h2>TRASPARENZA</h2>
-            <a href="#">Statuto dell'associazione AFK PROGETTO GIOVANI</a>    
+            <a href="#">Statuto dell'associazione AFK PROGETTO GIOVANI</a>
         </section>
     </main>
 </Layout>

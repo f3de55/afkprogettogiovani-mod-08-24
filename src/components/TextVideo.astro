@@ -3,13 +3,11 @@ const { video } = Astro.props;
 ---
 
 <div class="text-video">
-    <div>
+    <div class="text">
         <slot />
     </div>
-    <div>
-        <video controls width="720" height="405">
-            <source src={video} type="video/mp4" />
-        </video>
+    <div class="video">
+        <slot name="video" />
     </div>
 </div>
 
@@ -25,6 +23,9 @@ const { video } = Astro.props;
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
+        }
+        .text {
+            max-width: 50%;
         }
         .text-video div {
             gap: var(--space-s);

@@ -5,7 +5,7 @@ import { Image } from 'astro:assets';
 ---
 
 <div class="text-image">
-    <div>
+    <div class="text">
         <slot />
     </div>
     <div>
@@ -28,6 +28,9 @@ import { Image } from 'astro:assets';
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
+        }
+        .text {
+            max-width: 50%;
         }
         .text-image div {
             gap: var(--space-s);

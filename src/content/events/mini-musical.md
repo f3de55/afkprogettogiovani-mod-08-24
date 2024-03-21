@@ -1,9 +1,18 @@
 ---
 title: 'Mini Musical'
-text: 'test'
-date: 2021-05-20
-image: '/afkprogettogiovani/chi-siamo.jpg'
+text: 'Il 30 novembre 2021, quando eravamo ancora un piccolo gruppo quasi sconosciuto, ci siamo esibiti per la prima volta, portando in scena un mini musical al VIB di Lainate, in collaborazione con le agenzie immobiliari del Rhodense'
+date: 2021-11-30
+place: 'V.I.B.'
+image: '/afkprogettogiovani/events/minimusical.webp'
 ---
 
-![Chi Siamo](../../assets/chi-siamo.jpg)
-![Eventi Passati](../../assets/eventi-passati.png)
+![1](../../assets/events/minimusical/1.jpg)
+![2](../../assets/events/minimusical/2.jpg)
+![3](../../assets/events/minimusical/3.jpg)
+![4](../../assets/events/minimusical/4.jpg)
+![5](../../assets/events/minimusical/5.jpg)
+![6](../../assets/events/minimusical/6.jpg)
+![7](../../assets/events/minimusical/7.jpg)
+![8](../../assets/events/minimusical/8.jpg)
+![9](../../assets/events/minimusical/9.jpg)
+![10](../../assets/events/minimusical/10.jpg)
