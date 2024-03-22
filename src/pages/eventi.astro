@@ -7,6 +7,7 @@ import Grid from "../components/Grid.astro";
 import { getCollection } from "astro:content";
 
 import chiSiamoImage from "../assets/chi-siamo.jpg";
+import ilSentieroDiArgentoLocandinaImage from "../assets/events/il-sentiero-di-argento/locandina.jpg";
 
 const events = (await getCollection("events")).sort((a, b) => Number(b.data.date) - Number(a.data.date));
 ---
@@ -20,10 +21,10 @@ const events = (await getCollection("events")).sort((a, b) => Number(b.data.date
                 title="Il sentiero d'argento"
                 text="Un giovane becchino, un filosofo dimenticato e un trattato proibito: questa storia racconta quanto può essere potente un'idea, anche quando il mondo la ignora."
                 url="https://wa.me/+393513190008"
-                date="Sabato 8 giu 2024"
+                date="Domenica 9 giu 2024 - 18:30"
                 place="Auditorium Padre Reina Rho"
-                img={chiSiamoImage}
-                alt="Una foto di noi"
+                img={ilSentieroDiArgentoLocandinaImage}
+                alt="Locandina Il Sentiero di Argento"
             />
         </section>
         <section class="section-light" id="eventi-passati">
