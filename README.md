@@ -3,13 +3,13 @@
 
 ## TODO
 TODO:
-- Aggiungere piu roba in dicono di noi
 - Aggiungere link PayPal
 - Aggiungere statuto AFK
-- Rendere video nell'hero più performante: https://blog.logrocket.com/optimizing-video-backgrounds-css-javascript/#making-video-backgrounds-performant
 - Far funzionare autoplay su iOS
+- Rendere video nell'hero più performante: https://blog.logrocket.com/optimizing-video-backgrounds-css-javascript/#making-video-backgrounds-performant
 
 DONE:
+- Aggiungere piu roba in dicono di noi
 - Ottimizzare tutti i video (anche quello di amici sostenitori, riducendolo, lazy loading, trasformandolo in webm...)
 - Aggiungere immagini eventi
 - Cambiare immagini per ogni page <Title /> (le scelgo io)

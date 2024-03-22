@@ -7,9 +7,11 @@ import { Image } from 'astro:assets';
 ---
 
 <div class="testimonials-card">
-    <div class="logo">
-        <Image src={img} alt={alt} />
-    </div>
+    {img !== undefined &&
+        <div class="logo">
+            <Image src={img} alt={alt} />
+        </div>
+    }
     <h5>{title}</h5>
     <p>{text}</p>
     <ButtonLink url={url} text="Leggi tutto" icon="fa-solid fa-book" />
@@ -19,7 +21,7 @@ import { Image } from 'astro:assets';
     .testimonials-card {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        justify-content: center;
         gap: var(--space-s);
         padding: var(--space-m);
         border-radius: var(--border-radius);
