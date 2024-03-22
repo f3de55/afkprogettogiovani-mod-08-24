@@ -3,7 +3,7 @@ title: 'A Million Dreams - Replica'
 text: 'Sabato 16 settembre 2023 abbiamo portato in scena al Cine-teatro ‘La Filanda’ di Cornaredo, due repliche del nostro musical ‘A Million Dreams’, con un copione in parte rivisitato e un cast parzialmente rinnovato'
 date: 2023-09-16
 place: 'Cine-teatro La Filanda Cornaredo'
-image: '/afkprogettogiovani/events/a-million-dreams-3.webp'
+image: '/events/a-million-dreams-3.webp'
 ---
 
 ![1](../../assets/events/a-million-dreams-2/1.jpg)

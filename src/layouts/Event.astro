@@ -7,7 +7,7 @@ import PageTitle from '../components/PageTitle.astro';
 
 <Layout title=`${frontmatter.title} - AFK Progetto Giovani`>
     <main>
-        <PageTitle title="FOTO EVENTI" img="/afkprogettogiovani/chi-siamo.jpg" />
+        <PageTitle title="FOTO EVENTI" img="/chi-siamo.jpg" />
         <section class="event-page-grid">
                 <h2>{frontmatter.title.toUpperCase()}</h2>
                 <p>{frontmatter.date.toLocaleDateString("it-it", {day: "numeric", month: "long", year: "numeric"})} - {frontmatter.place}</p>

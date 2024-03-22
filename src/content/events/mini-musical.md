@@ -3,7 +3,7 @@ title: 'Mini Musical'
 text: 'Il 30 novembre 2021, quando eravamo ancora un piccolo gruppo quasi sconosciuto, ci siamo esibiti per la prima volta, portando in scena un mini musical al VIB di Lainate, in collaborazione con le agenzie immobiliari del Rhodense'
 date: 2021-11-30
 place: 'V.I.B.'
-image: '/afkprogettogiovani/events/minimusical.webp'
+image: '/events/minimusical.webp'
 ---
 
 ![1](../../assets/events/minimusical/1.jpg)

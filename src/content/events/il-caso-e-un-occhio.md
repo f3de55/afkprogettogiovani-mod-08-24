@@ -3,7 +3,7 @@ title: 'Il Caso è un Occhio'
 text: 'Dal 14 al 22 novembre 2022 il nostro presidente, Adriano Max, ha organizzato una mostra con i suoi disegni alla Libreria Ubik di Rho, intitolata ‘Il caso è un occhio’'
 date: 2022-11-14
 place: 'Libreria Ubik di Rho'
-image: '/afkprogettogiovani/events/il-caso-e-un-occhio.webp'
+image: '/events/il-caso-e-un-occhio.webp'
 ---
 
 ![1](../../assets/events/il-caso-e-un-occhio/1.jpg)

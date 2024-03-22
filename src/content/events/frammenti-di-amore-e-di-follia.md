@@ -3,7 +3,7 @@ title: 'Fra(m)menti d’Amore e di Follia'
 text: 'Sabato 18 marzo 2023, in occasione della Giornata Mondiale della Poesia e del compleanno di Alda Merini, ci siamo esibiti all’Auditorium di Rho con uno spettacolo sperimentale, in cui abbiamo cercato di integrare poesia, musica, canto e ballo: ‘Fra(m)menti d’Amore e di Follia’, accompagnati dai versi di Alda Merini e di Federica Re, e dalle danzatrici di Ilenia Nobile, direttrice della Scuola di Danza Multidisciplinare I.N. Ballet'
 date: 2023-03-18
 place: 'Auditorium di Rho'
-image: '/afkprogettogiovani/events/frammenti-di-amore-e-di-follia.webp'
+image: '/events/frammenti-di-amore-e-di-follia.webp'
 ---
 
 ![1](../../assets/events/frammenti-di-amore-e-di-follia/1.jpg)

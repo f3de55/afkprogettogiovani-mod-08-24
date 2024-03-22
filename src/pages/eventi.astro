@@ -13,7 +13,7 @@ const events = (await getCollection("events")).sort((a, b) => Number(b.data.date
 
 <Layout title="Eventi - AFK Progetto Giovani">
     <main>
-        <PageTitle title="EVENTI" img="/afkprogettogiovani/pagetitles/eventi.webp" />
+        <PageTitle title="EVENTI" img="/pagetitles/eventi.webp" />
         <section>
             <h2>PROSSIMI EVENTI</h2>
             <EventCard
@@ -32,7 +32,7 @@ const events = (await getCollection("events")).sort((a, b) => Number(b.data.date
                 {
                     events.map((event) => (
                         <PastEventCard
-                            url={`/afkprogettogiovani/events/${event.slug}`}
+                            url={`/events/${event.slug}`}
                             title={event.data.title}
                             text={event.data.text.length > 75 ? event.data.text.slice(0, 75) + "..." : event.data.text}
                             date={event.data.date.toLocaleDateString("it-it", {day: "numeric", month: "long", year: "numeric"})}
