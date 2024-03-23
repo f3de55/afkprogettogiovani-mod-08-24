@@ -1,8 +1,8 @@
 ---
-const { url, text, icon = "fa-solid fa-chevron-right" } = Astro.props;
+const { url, text, icon = "fa-solid fa-chevron-right", newtab = false } = Astro.props;
 ---
 
-<a class="bold" href={url}>
+<a class="bold" href={url} target={newtab && '_blank'} rel={newtab && 'noopener noreferrer'}>
     {text} <i class={icon}></i>
 </a>
 
