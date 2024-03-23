@@ -22,12 +22,12 @@ const currentPath = new URL(Astro.request.url).pathname.slice(1);
     <!-- Nav items -->
     <nav>
         <ul>
-            <li class={currentPath === '/' ? 'active' : ''}><a class="bold" href="/">Home</a></li>
-            <li class={currentPath === '/chi-siamo' ? 'active' : ''}><a class="bold" href="/chi-siamo">Chi siamo</a></li>
-            <li class={currentPath === '/eventi' ? 'active' : ''}><a class="bold" href="/eventi">Eventi</a></li>
-            <li class={currentPath === '/sostenitori' ? 'active' : ''}><a class="bold" href="/sostenitori">Sostenitori</a></li>
-            <li class={currentPath === '/dicono-di-noi' ? 'active' : ''}><a class="bold" href="/dicono-di-noi">Dicono di noi</a></li>
-            <li class={currentPath === '/contatti' ? 'active' : ''}><a class="bold" href="/contatti">Contatti</a></li>
+            <li class={currentPath === '' ? 'active' : ''}><a class="bold" href="/">Home</a></li>
+            <li class={currentPath === 'chi-siamo' ? 'active' : ''}><a class="bold" href="/chi-siamo">Chi siamo</a></li>
+            <li class={currentPath === 'eventi' ? 'active' : ''}><a class="bold" href="/eventi">Eventi</a></li>
+            <li class={currentPath === 'sostenitori' ? 'active' : ''}><a class="bold" href="/sostenitori">Sostenitori</a></li>
+            <li class={currentPath === 'dicono-di-noi' ? 'active' : ''}><a class="bold" href="/dicono-di-noi">Dicono di noi</a></li>
+            <li class={currentPath === 'contatti' ? 'active' : ''}><a class="bold" href="/contatti">Contatti</a></li>
         </ul>
     </nav>
 </header>
