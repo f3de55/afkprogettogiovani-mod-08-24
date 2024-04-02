@@ -7,6 +7,7 @@ import FeaturedBulletPoints from "../components/FeaturedBulletPoints.astro";
 import TimelineItem from "../components/TimelineItem.astro";
 import Grid from "../components/Grid.astro";
 import PeopleSlideshowCard from "../components/PeopleSlideshowCard.astro";
+import TextVideo from "../components/TextVideo.astro";
 
 import { Image } from "astro:assets";
 import chiSiamoImage from "../assets/chi-siamo.jpg";
@@ -44,15 +45,14 @@ import laNostraStoriaImage from "../assets/la-nostra-storia.jpg";
                     unicità.
                 </p>
                 <p>
-                    Il motto che ci guida è ‘Lontano dagli schermi,
-                    fuori dagli schemi!’, e anche se ognuno di noi studia o
-                    lavora, ci incontriamo ogni settimana per realizzare nuovi
-                    progetti, e per trasformare i nostri sogni in realtà.
+                    Il motto che ci guida è ‘Lontano dagli schermi, fuori dagli
+                    schemi!’, e anche se ognuno di noi studia o lavora, ci
+                    incontriamo ogni settimana per realizzare nuovi progetti, e
+                    per trasformare i nostri sogni in realtà.
                 </p>
                 <p>
-                    Il
-                    musical è il genere a noi più congeniale, ma siamo aperti ad
-                    ogni tipo di contaminazione culturale. Oltre ad occuparci
+                    Il musical è il genere a noi più congeniale, ma siamo aperti
+                    ad ogni tipo di contaminazione culturale. Oltre ad occuparci
                     personalmente della scrittura e della messa in scena dei
                     nostri spettacoli (sul palco, nel backstage e nella parte
                     tecnica), abbiamo come obiettivo principale la solidarietà:
@@ -111,6 +111,30 @@ import laNostraStoriaImage from "../assets/la-nostra-storia.jpg";
                 />
             </Grid>
             <Image src={laNostraStoriaImage} alt="Una foto di noi" />
+        </section>
+        <section>
+            <TextVideo>
+            <h2>CURIOSITÀ SU UN NOSTRO SPETTACOLO</h2>
+            <p>
+                Da ‘A Million Dreams’, oltre che il nostro primo spettacolo, è
+                nata anche una poesia che Federica, una dei nostri amici
+                ‘diversamente giovani’ ha voluto dedicarci, con l’intento di
+                racchiudere nei suoi versi la passione, l’energia e le
+                meraviglie che ci legano, e che portiamo non solo sul palco, ma
+                in tutte le cose che facciamo insieme.
+            </p>
+            <iframe
+                loading="lazy"
+                slot="video"
+                width="860"
+                height="487"
+                src="https://www.youtube.com/embed/XaWzyOe1vBU"
+                title="A Million Dreams"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen></iframe>
+            </TextVideo>
         </section>
         <section class="section-light">
             <h2>TRASPARENZA</h2>
