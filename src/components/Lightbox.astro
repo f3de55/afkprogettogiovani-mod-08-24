@@ -5,7 +5,9 @@ import chiSiamoImage from '../assets/chi-siamo.jpg';
 
 <aside id="lightbox">
     <span id="lightbox-close"><i class="fa-solid fa-xmark"></i></span>
+    <!-- <button id="prev" class="nav-button">&#10094;</button> -->
     <Image id="lightbox-image" src={chiSiamoImage} alt="Una foto di noi" />
+    <!--<button id="next" class="nav-button">&#10095;</button> -->
 </aside>
 
 <style>
@@ -34,7 +36,30 @@ import chiSiamoImage from '../assets/chi-siamo.jpg';
         font-size: 2rem;
         cursor: pointer;
     }
+    .nav-button {
+    background: rgb(255, 255, 255);
+    border:none;
+    border-radius: 50px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: black;
+    }
+    #prev {
+        position: absolute;
+        left: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 800;
+    }
 
+    #next {
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 800;
+    }
     @media screen and (min-width: 1000px) {
         img {
             width: auto;
@@ -44,6 +69,12 @@ import chiSiamoImage from '../assets/chi-siamo.jpg';
             right: 2rem;
             font-size: 3.125rem;
         }
+        .nav-button{
+            padding: 15px;
+            font-size: 2rem;
+            
+        }
+      
     }
 </style>
 
@@ -54,12 +85,31 @@ import chiSiamoImage from '../assets/chi-siamo.jpg';
 
     let lightbox = document.getElementById('lightbox');
     let lightboxImage = document.getElementById('lightbox-image');
+    let currentIndex = 0;
+    let images = [];
+
     document.getElementById('lightbox-close').addEventListener('click', () => toggleLightbox(lightbox));
     lightbox.addEventListener('onfocusout', () => toggleLightbox(lightbox));
 
-    document.querySelectorAll('img:not(#logo)').forEach(img => img.addEventListener('click', () => {
-        lightboxImage.src = img.src;
-        lightboxImage.alt = img.alt;
-        toggleLightbox(lightbox);
-    }));
+    document.querySelectorAll('img:not(#logo)').forEach((img, index) => {
+        img.addEventListener('click', () => {
+            lightboxImage.src = img.src;
+            lightboxImage.alt = img.alt;
+            currentIndex = index;
+            images = Array.from(document.querySelectorAll('img:not(#logo)'));
+            toggleLightbox(lightbox);
+        });
+    });
+/*
+    document.getElementById('prev').addEventListener('click', () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+        lightboxImage.src = images[currentIndex].src;
+        lightboxImage.alt = images[currentIndex].alt;
+    });
+
+    document.getElementById('next').addEventListener('click', () => {
+        currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+        lightboxImage.src = images[currentIndex].src;
+        lightboxImage.alt = images[currentIndex].alt;
+    }); */
 </script>
