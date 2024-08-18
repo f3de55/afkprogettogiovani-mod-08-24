@@ -1,6 +1,5 @@
 ---
-const { title, text, url, dateSaturday, dateSunday, place, img, alt } = Astro.props;
-
+const { title, text, url, date, place, img, alt } = Astro.props;
 
 import Button from './Button.astro';
 import ButtonLink from './ButtonLink.astro';
@@ -14,9 +13,7 @@ import FeaturedBulletPoints from './FeaturedBulletPoints.astro';
         <h3>{title}</h3>
         <p>{text}</p>
         <BulletPoint icon="fa-solid fa-location-dot" text={place} />
-        <BulletPoint icon="fa-solid fa-clock" text={dateSaturday} />
-<BulletPoint icon="fa-solid fa-clock" text={dateSunday} />
-
+        <BulletPoint icon="fa-solid fa-clock" text={date} />
         <Button text="Scopri di più" />
     </TextImage>
 </div>
@@ -28,8 +25,7 @@ import FeaturedBulletPoints from './FeaturedBulletPoints.astro';
             <p>{text}</p>
             <FeaturedBulletPoints>
                 <BulletPoint icon="fa-solid fa-location-dot" text={place} />
-                <BulletPoint icon="fa-solid fa-clock" text={dateSaturday} />
-                <BulletPoint icon="fa-solid fa-clock" text={dateSunday} />
+                <BulletPoint icon="fa-solid fa-clock" text={date} />
                 <BulletPoint icon="fa-solid fa-euro-sign" text="Ingresso con offerta" />
             </FeaturedBulletPoints>
             <ButtonLink url={url} text="Prenota i biglietti" icon="fa-brands fa-whatsapp" />
@@ -106,9 +102,5 @@ import FeaturedBulletPoints from './FeaturedBulletPoints.astro';
     // Add toggle modal event listeners
     let modal = document.getElementById('modal');
     document.getElementsByTagName('button')[0].addEventListener('click', () => toggleModal(modal));
-    const modalCloseButton = document.getElementById('modal-close');
-if (modalCloseButton) {
-    modalCloseButton.addEventListener('click', () => toggleModal(modal));
-}
-
+    document.getElementById('modal-close').addEventListener('click', () => toggleModal(modal));
 </script>

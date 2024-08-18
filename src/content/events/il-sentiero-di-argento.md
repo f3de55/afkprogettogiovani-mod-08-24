@@ -1,6 +1,6 @@
 ---
-title: 'Il Sentiero D''argento'
-text: 'Il 9 giugno 2024, abbiamo presentato sul palco dell''Auditorium di Rho uno spettacolo inedito, ambientato nella Londra del 1800, tra teorie sull''anima e incontri tra il mondo dei vivi e quello dei morti.'
+title: 'Il Sentiero D’argento'
+text: 'Il 9 giugno 2024, abbiamo presentato sul palco dell’Auditorium di Rho uno spettacolo inedito, ambientato nella Londra del 1800, tra teorie sull’anima e incontri tra il mondo dei vivi e quello dei morti.'
 date: 2024-06-09
 place: 'Auditorium di Rho'
 image: '/events/il-sentiero-di-argento.webp'
@@ -34,5 +34,3 @@ image: '/events/il-sentiero-di-argento.webp'
 ![26](../../assets/events/il-sentiero-di-argento/26.jpeg)
 ![27](../../assets/events/il-sentiero-di-argento/27.jpeg)
 ![28](../../assets/events/il-sentiero-di-argento/28.jpeg)
-
-
