@@ -12,7 +12,7 @@ import TextVideo from "../components/TextVideo.astro";
 import { Image } from "astro:assets";
 import chiSiamoImage from "../assets/chi-siamo.jpg";
 import eventipassatiImage from "../assets/eventi-passati.png";
-import ilSentieroDiArgentoLocandinaImage from "../assets/copertina-il-sentiero-argento.jpg";
+import ilSentieroDiArgentoLocandinaImage from "../assets/events/il-sentiero-di-argento/locandina.jpg";
 ---
 
 <Layout title="AFK Progetto Giovani">
@@ -45,20 +45,18 @@ import ilSentieroDiArgentoLocandinaImage from "../assets/copertina-il-sentiero-a
                 </p>
             </TextImage>
         </section>
-         <section>
+        <!-- <section>
             <h2>PROSSIMI EVENTI</h2>
-            <p>Novità in arrivo, restate connessi!</p>
-           <!--  <EventCard
-            title="Il Sentiero D'argento - Repliche"
-            text="Un giovane becchino, un filosofo dimenticato e un trattato proibito: questa storia racconta quanto può essere potente un'idea, anche quando il mondo la ignora."
-            url="https://wa.me/+393513190008"
-            dateSaturday="Sabato 19 ottobre ore 20"
-            dateSunday="Domenica 20 ottobre ore 16.30 e 19.30"
-            place="Auditorium Padre Reina Rho"
-            img={ilSentieroDiArgentoLocandinaImage}
-            alt="Locandina Il Sentiero di Argento"
-        />-->
-        </section> 
+            <EventCard
+                title="Il sentiero d'argento"
+                text="Un giovane becchino, un filosofo dimenticato e un trattato proibito: questa storia racconta quanto può essere potente un'idea, anche quando il mondo la ignora."
+                url="https://wa.me/+393513190008"
+                date="Domenica 9 giu 2024 - 18:30"
+                place="Auditorium Padre Reina Rho"
+                img={ilSentieroDiArgentoLocandinaImage}
+                alt="Locandina Il Sentiero di Argento"
+            />
+        </section> -->
         <section>
             <h2>EVENTI PASSATI</h2>
             <Image src={eventipassatiImage} alt="Una foto di noi" />
@@ -120,22 +118,4 @@ import ilSentieroDiArgentoLocandinaImage from "../assets/copertina-il-sentiero-a
             <ContactInfo />
         </section>
     </main>
-    
-    <!--
-    <script>
-        const wordsToHighlight = ['entusiasmo', 'teatro', 'progetti', 'solidarietà', 'spettacoli', 'generosità'];
-        function highlightText(text) {
-            const regex = new RegExp(`(${wordsToHighlight.join('|')})`, 'gi');
-            return text.replace(regex, '<strong style="color: var(--pink-5);">$1</strong>');
-        }
-
-        // Applica il grassetto ai paragrafi
-        document.addEventListener('DOMContentLoaded', () => {
-            const paragraphs = document.querySelectorAll('p');
-            paragraphs.forEach(paragraph => {
-                paragraph.innerHTML = highlightText(paragraph.textContent);
-            });
-        });
-    </script>
-    -->
 </Layout>
