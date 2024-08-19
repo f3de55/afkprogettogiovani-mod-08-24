@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets';
 import logoImage from '../assets/afk-logo-bianco-trasparente.png';
 
-const currentPath = new URL(Astro.request.url).pathname.slice(1);
+const currentPath = new URL(Astro.request.url).pathname.slice(1).slice(0, -1);
 ---
 
 <header>
