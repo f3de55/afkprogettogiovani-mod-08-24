@@ -1,6 +1,6 @@
 ---
 title: 'A Million Dreams - Replica Palermo'
-text: 'Sabato 23 settembre 2023 abbiamo avuto il piacere di debuttare al Nuovo Teatro Orione di Palermo con altre due repliche di ‘A Million Dreams’. E’ stata la nostra prima trasferta insieme, e il nostro primo spettacolo in un’altra regione'
+text: 'Abbiamo avuto il piacere di debuttare al Nuovo Teatro Orione di Palermo con altre due repliche di ‘A Million Dreams’. E’ stata la nostra prima trasferta insieme, e il nostro primo spettacolo in un’altra regione'
 date: 2023-09-23
 place: 'Teatro Orione Palermo'
 image: '/events/a-million-dreams-4.webp'

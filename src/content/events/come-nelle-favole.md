@@ -1,6 +1,6 @@
 ---
 title: 'Come nelle favole'
-text: 'Il 17 giugno 2022 siamo stati ospiti al Teatro Carcano di Milano, all’interno dello spettacolo ‘Come nelle favole’ organizzato da Ilenia Nobile e dalla sua Scuola di Danza multidisciplinare I.N. Ballet. Ci siamo esibiti nella coreografia finale del nostro musical, ‘A Million Dreams’'
+text: 'Siamo stati ospiti al Teatro Carcano di Milano, all’interno dello spettacolo ‘Come nelle favole’ organizzato da Ilenia Nobile e dalla sua Scuola di Danza multidisciplinare I.N. Ballet. Ci siamo esibiti nella coreografia finale del nostro musical, ‘A Million Dreams’'
 date: 2022-06-17
 place: 'Teatro Carcano'
 image: '/events/come-nelle-favole.webp'

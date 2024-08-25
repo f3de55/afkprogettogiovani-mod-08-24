@@ -1,6 +1,6 @@
 ---
 title: 'A Million Dreams - Replica'
-text: 'Sabato 3 dicembre 2022, abbiamo avuto l’onore di essere una delle prime compagnie teatrali amatoriali a calcare il palcoscenico del Nuovo Teatro Civico Roberto de Silva di Rho, con due repliche del nostro musical, ‘A Million Dreams’, anche questa volta andate entrambe sold out'
+text: 'Abbiamo avuto l’onore di essere una delle prime compagnie teatrali amatoriali a calcare il palcoscenico del Nuovo Teatro Civico Roberto de Silva di Rho, con due repliche del nostro musical, ‘A Million Dreams’, anche questa volta andate entrambe sold out'
 date: 2022-12-03
 place: 'Teatro Roberto de Silva'
 image: '/events/a-million-dreams-2.webp'

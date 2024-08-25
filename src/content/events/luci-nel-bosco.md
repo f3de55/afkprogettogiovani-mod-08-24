@@ -1,6 +1,6 @@
 ---
 title: 'Luci nel Bosco'
-text: 'Il 17 e il 18 settembre 2022, in occasione dell’evento ‘Luci nel Bosco - Associazioni in festa’ al Parco di Lucernate, siamo stati presenti con il nostro stand e ci siamo esibiti con un estratto del nostro musical, ‘A Million Dreams’'
+text: 'In occasione dell’evento ‘Luci nel Bosco - Associazioni in festa’ al Parco di Lucernate, siamo stati presenti con il nostro stand e ci siamo esibiti con un estratto del nostro musical, ‘A Million Dreams’'
 date: 2022-09-17
 place: 'Parco Magenta di Lucernate'
 image: '/events/luci-nel-bosco.webp'

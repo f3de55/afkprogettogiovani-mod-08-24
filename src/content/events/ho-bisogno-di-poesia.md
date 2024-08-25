@@ -1,6 +1,6 @@
 ---
 title: 'Ho Bisogno di Poesia'
-text: 'L’8 ottobre 2022, in collaborazione con Caminante APS, abbiamo partecipato all’evento al Parco della Ghisolfa ‘Ho bisogno di poesia – esperienze poetiche in cammino sulle tracce di Alda Merini’, alternando la lettura dei versi della poetessa a esibizioni a tema tratte dal nostro repertorio'
+text: 'In collaborazione con Caminante APS, abbiamo partecipato all’evento al Parco della Ghisolfa ‘Ho bisogno di poesia – esperienze poetiche in cammino sulle tracce di Alda Merini’, alternando la lettura dei versi della poetessa a esibizioni a tema tratte dal nostro repertorio'
 date: 2022-10-08
 place: 'Parco Ghisolfa Rho'
 image: '/events/ho-bisogno-di-poesia.webp'
